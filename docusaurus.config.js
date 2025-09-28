@@ -82,7 +82,7 @@ const config = {
         title: "Webfejlesztés",
         logo: {
           alt: "WEB Logo",
-          src: "img/website-development-javascript-html5-css3.jpg",
+          src: "img/web_logo.jpg",
         },
         items: [
           {
