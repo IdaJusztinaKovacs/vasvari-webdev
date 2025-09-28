@@ -365,7 +365,7 @@ Ezek ma is működnek, de nem ajánlott használni őket, mert csak formázást 
 
 **Megjelenés a böngészőben:**
 
-![Idézetek](/img/idezetek.jpg)
+![Idézetek](/img/idezetek.JPG)
 
 ### 6. Kód és előformázás
 
