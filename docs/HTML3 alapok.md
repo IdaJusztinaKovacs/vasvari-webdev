@@ -4,10 +4,10 @@
 
 A karakterentitás három részből áll:
 
-az elején & jel, a végén ; jel
+az elején `&` jel, a végén `;` jel
 
 - és a kettő között pedig egy meghatározott kódsorozat van:
-- & kódsorozat;
+- `&`kódsorozat`;`
 
 A legtöbbet alkalmazott karakterentitás:
 
