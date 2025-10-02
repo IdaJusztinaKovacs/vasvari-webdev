@@ -1,5 +1,20 @@
 # 3. HTML alapok III
 
+## Karakterentitások
+
+A karakterentitás három részből áll:
+
+az elején & jel, a végén ; jel
+
+- és a kettő között pedig egy meghatározott kódsorozat van:
+- & kódsorozat;
+
+A legtöbbet alkalmazott karakterentitás:
+
+- a nem törhető szóköz, azaz az `&nbsp;`
+
+![Karakterentások](/img/Karakterentitas.png)
+
 ## Szakaszok
 
 HTML-ben lehetőségünk van a weboldal tartalmának strukturálására is. Ezt szakaszok, tartalmi egységek kialakításával tehetjük meg.
@@ -31,6 +46,48 @@ Egy sorszintű (inline) HTML elem nem tartalmazhat blokkszintű (block) elemet!!
       <h2>2. tartalmi egység</h2>
       <p>Ez egy olyan bekezdés, ami egy <span>span elemet</span> tartalmaz.</p>
     </div>
+  </body>
+</html>
+```
+
+## Az id és class attribútumok
+
+Minden HTML objektumnak adható egyedi azonosító, illetve minden HTML objektum csoportosítható osztályokba. Ezek alapvetően majd CSS-ben lesznek hasznosak, amikor egy-egy objektumra vagy objektumok csoportjára szeretnénk hivatkozni.
+
+**Egyedi azonosító (id attribútum):** egy adott HTML elem egyértelmű azonosítására szolgál. Értéke a dokumentumon belül szabályosan egyedi kell, hogy legyen, továbbá ez az érték nem tartalmazhat szóközt, valamint számmal sem kezdődhet.
+
+**Osztály (class attribútum):** jellemzően több HTML elem csoportosítására használatos. Értéke nem kell, hogy egyedi legyen, sőt általában nem az. Értékéül szóközzel elválasztva megadható több olyan osztály neve is, amelyekhez az adott elem tartozik
+
+```html
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <title>ID és Class példa</title>
+    <style>
+      /* id: #header (egyedi) */
+
+      /* class: .card (több elemre) */
+
+      /* több class egy elemre (összeadódik) */
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <h1>Oldal címe</h1>
+    </header>
+
+    <section>
+      <div class="card">Kártya 1 — ugyanaz a class</div>
+      <div class="card">Kártya 2 — ugyanaz a class</div>
+
+      <!-- több class egy elemben -->
+      <a href="#footer" class="btn primary large">Ugrás a lábléchez</a>
+    </section>
+
+    <footer id="footer" class="card">
+      <p>Lábléc — itt is van id és class egyszerre</p>
+    </footer>
   </body>
 </html>
 ```
