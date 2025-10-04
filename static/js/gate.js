@@ -7,8 +7,16 @@
     var m = document.cookie.match("(?:^|;)\\s*" + name + "\\s*=\\s*([^;]+)");
     return m ? decodeURIComponent(m[1]) : null;
   }
+
+  function setSessionCookie(name, value) {
+    document.cookie = name + "=" + encodeURIComponent(value) + ";path=/";
+  }
   var authed = getCookie("vasvari_auth") === HASH;
   var onGate = location.pathname.endsWith("/gate.html");
 
   if (!authed && !onGate) location.replace(GATE);
+  // Ha a gate.html hívja meg, akkor a belépéskor szintén session cookie-t állíthatsz:
+  window.__setAuthSession = function () {
+    setSessionCookie("vasvari_auth", HASH);
+  };
 })();
