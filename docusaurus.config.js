@@ -12,7 +12,7 @@ const isNetlify = process.env.NETLIFY === "true";
 
 const config = {
   title: "Webfejlesztés",
-  tagline: "Dinosaurs are cool",
+  tagline: "Tanulj modern webfejlesztést lépésről lépésre!",
   favicon: "img/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
