@@ -1,8 +1,12 @@
+---
+id: html4-color
+title: 4. Színek megadása HTML-ben és CSS-ben
+sidebar_position: 4
+---
+
 # 4. Színek megadása HTML-ben és CSS-ben
 
 ## Színek
-
----
 
 Színeket többféle objektumnak megadhatunk: színt kaphatnak például a karakterek, vonalak, sőt
 még a háttér vagy a szegély is, azonban a szín kialakítása minden esetben ugyanazon elvek alapján történik. (Maguknak a színeknek a megadása többféle módon is történhet. Az arculattervezés során használt grafikai programok is számos színkoordinárendszert ismernek, így szabadon választhatunk, hogy melyik szerint adjuk meg a színeket.)
