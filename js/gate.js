@@ -3,12 +3,9 @@
   var GATE = BASE + "gate.html";
   var HASH = "e661698d21b6cf65acb34373b067c59080a433bcf0cd6fdee58c182eaa8d4f6c"; // ugyanaz, mint a gate.html-ben
 
-  function authed() {
-    try {
-      return sessionStorage.getItem("vasvari_auth") === HASH;
-    } catch (_) {
-      return false;
-    }
+  function getCookie(name) {
+    var m = document.cookie.match("(?:^|;)\\s*" + name + "\\s*=\\s*([^;]+)");
+    return m ? decodeURIComponent(m[1]) : null;
   }
 
   function setSessionCookie(name, value) {
