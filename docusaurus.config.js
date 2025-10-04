@@ -5,10 +5,11 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from "prism-react-renderer";
-
+const isNetlify = process.env.NETLIFY === "true";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
+
 const config = {
   title: "Webfejlesztés",
   tagline: "Dinosaurs are cool",
@@ -19,8 +20,17 @@ const config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
-  url: "https://IdaJusztinaKovacs.github.io",
-  baseUrl: "/vasvari-webdev/",
+  //url: "https://IdaJusztinaKovacs.github.io",
+  //baseUrl: "/vasvari-webdev/",
+  //organizationName: "IdaJusztinaKovacs",
+  //projectName: "vasvari-webdev",
+  //deploymentBranch: "gh-pages",
+  //trailingSlash: false,
+
+  url: isNetlify
+    ? "https://<a-te-netlify-neved>.netlify.app"
+    : "https://IdaJusztinaKovacs.github.io",
+  baseUrl: isNetlify ? "/" : "/vasvari-webdev/",
   organizationName: "IdaJusztinaKovacs",
   projectName: "vasvari-webdev",
   deploymentBranch: "gh-pages",
