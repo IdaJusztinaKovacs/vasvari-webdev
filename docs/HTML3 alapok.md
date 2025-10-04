@@ -2,6 +2,8 @@
 
 ## Karakterentitások
 
+---
+
 A karakterentitás három részből áll:
 
 az elején `&` jel, a végén `;` jel

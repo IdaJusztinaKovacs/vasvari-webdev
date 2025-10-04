@@ -215,7 +215,7 @@ Ha a width és height attribútumok közül csak az egyiket adjuk meg, akkor a m
 </html>
 ```
 
-<img src="../build/img/medve.jpg" alt="Medve" width="400"/>
+<img src="/vasvari-webdev/img/medve.jpg" alt="Medve" class="medve-img" />
 
 ### 4. `<a>` címke
 
