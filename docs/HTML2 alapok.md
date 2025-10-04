@@ -370,7 +370,7 @@ Ezek ma is működnek, de nem ajánlott használni őket, mert csak formázást 
 
 **Megjelenés a böngészőben:**
 
-![Idézetek](/img/idezetek.JPG)
+![Idézetek](/img/idezetek.jpg)
 
 ### 6. Kód és előformázás
 
