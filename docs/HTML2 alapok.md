@@ -191,7 +191,7 @@ Ez tartalmazza a weblap **látható tartalmát**.
 
 A fenti kódot tartalmazó HTML fájlt böngészőben megnyitva a következő kimenetet kapjuk:
 
-![Bekezdés és címsorok](/img/bekezdes_cimsor.jpg)
+![Bekezdés és címsorok](/img/cimsor.jpg)
 
 ### 3. `<img/>` páratlan címke
 
