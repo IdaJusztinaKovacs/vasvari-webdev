@@ -1,5 +1,7 @@
 # 4. Színek megadása HTML-ben és CSS-ben
 
+## Színek
+
 ---
 
 Színeket többféle objektumnak megadhatunk: színt kaphatnak például a karakterek, vonalak, sőt
