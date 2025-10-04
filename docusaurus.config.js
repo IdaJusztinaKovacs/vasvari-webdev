@@ -147,6 +147,13 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+
+      markdown: {
+        hooks: {
+          onBrokenMarkdownImages: "warn",
+          onBrokenMarkdownLinks: "warn",
+        },
+      },
     }),
 };
 
