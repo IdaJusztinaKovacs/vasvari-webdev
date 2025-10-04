@@ -11,13 +11,15 @@
     }
   }
 
+  function setSessionCookie(name, value) {
+    document.cookie = name + "=" + encodeURIComponent(value) + ";path=/";
+  }
+  var authed = getCookie("vasvari_auth") === HASH;
   var onGate = location.pathname.endsWith("/gate.html");
-  if (!authed() && !onGate) location.replace(GATE);
 
-  // gate.html hívja sikeres belépéskor
+  if (!authed && !onGate) location.replace(GATE);
+  // Ha a gate.html hívja meg, akkor a belépéskor szintén session cookie-t állíthatsz:
   window.__setAuthSession = function () {
-    try {
-      sessionStorage.setItem("vasvari_auth", HASH);
-    } catch (_) {}
+    setSessionCookie("vasvari_auth", HASH);
   };
 })();
