@@ -33,6 +33,7 @@ const config = {
       "https://example.netlify.app"
     : "https://IdaJusztinaKovacs.github.io",
   baseUrl: isNetlify ? "/" : "/vasvari-webdev/",
+  scripts: [{ src: "js/gate.js", async: false }],
   organizationName: "IdaJusztinaKovacs",
   projectName: "vasvari-webdev",
   deploymentBranch: "gh-pages",
@@ -154,8 +155,6 @@ const config = {
           onBrokenMarkdownLinks: "warn",
         },
       },
-
-      scripts: [{ src: "/js/gate.js", async: false }],
     }),
 };
 
