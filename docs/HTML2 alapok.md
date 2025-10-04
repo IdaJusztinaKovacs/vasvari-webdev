@@ -1,3 +1,8 @@
+---
+sidebar_position: 2
+title: 2. HTML alapok II
+---
+
 # 2. HTML alapok II.
 
 ## A head (fejrész) fontosabb tagjei

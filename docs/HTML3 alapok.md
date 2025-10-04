@@ -1,3 +1,8 @@
+---
+sidebar_position: 3
+title: 3. HTML alapok III
+---
+
 # 3. HTML alapok III
 
 ## Karakterentitások
