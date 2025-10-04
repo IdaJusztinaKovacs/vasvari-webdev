@@ -43,7 +43,7 @@ Közöttük a 00 a legsötétebb és az FF pedig a legvilágosabb.
 
 A hexadecimális számoknál a 9 feletti értékeket jelképező betűket mind kisbetűvel, mind nagybetűvel megadhatjuk.
 
-Például: a #FF0000 a piros, a #00FF00 a zöld, a #0000FF a kék, a #000000 a fekete, a #FFFFFF
+Például: a `#FF0000` a piros, a `#00FF00` a zöld, a `#0000FF` a kék, a `#000000` a fekete, a `#FFFFFF`
 a fehér színeket határozza meg.
 
 Rövidítve is írható a #rgb formában.
@@ -55,13 +55,13 @@ rendszeren majdnem azonos árnyalatban jelennek meg (azaz számítógéptől fü
 ## Decimális RGB-kód
 
 Az alapszínek intenzitását a 0 és a 255 közötti egész számokkal is megadhatjuk:
-rgb(r,g,b), pl. rgb(122, 205, 15).
+rgb(r,g,b), pl. `rgb(122, 205, 15).`
 
 ## Százalékos RGB-kód
 
 Az RGB-kódok megadása százalékos értékekkel is lehetséges: rgb(rrr%,ggg%,bbb%),
 ekkor az egyes komponensek értékei csak a 0% és 100% közötti zárt intervallumba eshetnek,
-pl. rgb(15%, 98%, 57%). (A 0% éppen nullát, a 100% pedig 255-öt jelent, illetve a százalékjelet
+pl. `rgb(15%, 98%, 57%)`. (A 0% éppen nullát, a 100% pedig 255-öt jelent, illetve a százalékjelet
 közvetlenül a szám után kell írni.)
 
 ## HSL-kód
@@ -78,9 +78,9 @@ rendszeresen alkalmazunk átlátszó színeket vagy rétegeket.)
 
 Az átlátszóság mértékét transparency, az átlátszatlanságot opacity néven találhatjuk általában
 a programokban, illetve (mint itt is) az úgynevezett alfa csatorna (rövidítve A) segítségével
-tudunk átlátszóságot beállítani. A CSS-szabványban az alfa csatorna értéke a [0;1] intervallumból vett (valós) érték, amelynél a 0 érték a teljesen átlátszót, az 1 pedig a teljesen átlátszatlan változatot jelenti.
+tudunk átlátszóságot beállítani. A CSS-szabványban az alfa csatorna értéke a `[0;1]` intervallumból vett (valós) érték, amelynél a 0 érték a teljesen átlátszót, az 1 pedig a teljesen átlátszatlan változatot jelenti.
 
 Ha egy RGB-kódhoz szeretnénk alfa csatornát megadni, akkor az rgb helyett az rgba szerinti kódmegadást kell használni úgy, hogy a három színösszetevő mögött negyedikként
-az átlátszóság mértékét jelző értéket kell megadni: rgba(red,green,blue,alpha), például:rgba(100,25,42,0.3).
+az átlátszóság mértékét jelző értéket kell megadni: rgba(red,green,blue,alpha), például:`rgba(100,25,42,0.3)`.
 
-A hsl esetén ugyanígy kell eljárni: a hsla szerinti kódban a negyedik jelöli az átlátszóság mértékét: hsla(hue,saturation,lightness,alpha), pl. egy ilyen lehetséges kód: hsla(120,100%,25%,0.8).
+A hsl esetén ugyanígy kell eljárni: a hsla szerinti kódban a negyedik jelöli az átlátszóság mértékét: hsla(hue,saturation,lightness,alpha), pl. egy ilyen lehetséges kód: `hsla(120,100%,25%,0.8)`.
