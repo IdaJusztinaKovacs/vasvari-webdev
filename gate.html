@@ -23,22 +23,15 @@
           .map((b) => b.toString(16).padStart(2, "0"))
           .join("");
       }
-      function setCookie(n, v, d) {
-        const t = new Date();
-        t.setTime(t.getTime() + d * 864e5);
-        document.cookie =
-          n +
-          "=" +
-          encodeURIComponent(v) +
-          ";path=/;expires=" +
-          t.toUTCString();
-      }
+
       document.getElementById("go").onclick = async () => {
-        const p = document.getElementById("pwd").value || "";
-        if ((await sha256hex(p)) === HASH) {
-          setCookie("vasvari_auth", HASH, 7);
+        const pass = document.getElementById("pwd").value || "";
+        if ((await sha256hex(pass)) === HASH) {
+          if (window.__setAuthSession) window.__setAuthSession();
           location.replace(TARGET);
-        } else alert("Helytelen jelszó!");
+        } else {
+          alert("Helytelen jelszó!");
+        }
       };
     </script>
   </body>
