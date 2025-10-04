@@ -142,7 +142,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Dr. Kovács Ida Jusztina | Minden jog fenntartva!.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Dr. Kovács Ida Jusztina | Minden jog fenntartva!`,
       },
       prism: {
         theme: prismThemes.github,
