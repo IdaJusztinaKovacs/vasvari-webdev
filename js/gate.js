@@ -10,18 +10,6 @@
       return false;
     }
   }
-
-  var path = window.location.pathname;
-  var onGate = path.endsWith("/gate.html") || path === GATE;
-
-  if (!isAuthed() && !onGate) {
-    window.location.replace(GATE);
-  }
-
-  // Ezt a gate.html fogja meghívni sikeres jelszóbeírás után
-  window.__setAuthSession = function () {
-    try {
-      sessionStorage.setItem("vasvari_auth", HASH);
-    } catch (_) {}
-  };
+  var onGate = location.pathname.endsWith("/gate.html");
+  if (!isAuthed() && !onGate) location.replace(GATE);
 })();

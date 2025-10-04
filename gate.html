@@ -25,9 +25,16 @@
       }
 
       document.getElementById("go").onclick = async () => {
-        const pass = document.getElementById("pwd").value || "";
-        if ((await sha256hex(pass)) === HASH) {
-          if (window.__setAuthSession) window.__setAuthSession();
+        const pass = (document.getElementById("pwd").value || "").trim();
+        const inputHash = await sha256hex(pass);
+
+        // DEBUG: ha gond van, nézd meg a konzolban a két értéket
+        console.log("calc:", inputHash, "expected:", HASH);
+
+        if (inputHash === HASH) {
+          try {
+            sessionStorage.setItem("vasvari_auth", HASH);
+          } catch (_) {}
           location.replace(TARGET);
         } else {
           alert("Helytelen jelszó!");
