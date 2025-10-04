@@ -28,7 +28,9 @@ const config = {
   //trailingSlash: false,
 
   url: isNetlify
-    ? "https://<a-te-netlify-neved>.netlify.app"
+    ? process.env.DEPLOY_PRIME_URL ||
+      process.env.URL ||
+      "https://example.netlify.app"
     : "https://IdaJusztinaKovacs.github.io",
   baseUrl: isNetlify ? "/" : "/vasvari-webdev/",
   organizationName: "IdaJusztinaKovacs",
