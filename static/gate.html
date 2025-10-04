@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Belépés</title>
+  </head>
+  <body>
+    <h2>Belépés</h2>
+    <p>Írd be a jelszót:</p>
+    <input id="pwd" type="password" autofocus />
+    <button id="go">Belépés</button>
+    <script>
+      const BASE = "/vasvari-webdev/"; // ← ha nálad más az alapút, írd át
+      const TARGET = BASE; // pl. BASE+"hu/" ha oda akarsz beléptetni
+      const HASH =
+        "e661698d21b6cf65acb34373b067c59080a433bcf0cd6fdee58c182eaa8d4f6c"; // ← ide kerül a jelszó SHA-256 hex-e
+
+      async function sha256hex(s) {
+        const enc = new TextEncoder().encode(s);
+        const buf = await crypto.subtle.digest("SHA-256", enc);
+        return [...new Uint8Array(buf)]
+          .map((b) => b.toString(16).padStart(2, "0"))
+          .join("");
+      }
+      function setCookie(n, v, d) {
+        const t = new Date();
+        t.setTime(t.getTime() + d * 864e5);
+        document.cookie =
+          n +
+          "=" +
+          encodeURIComponent(v) +
+          ";path=/;expires=" +
+          t.toUTCString();
+      }
+      document.getElementById("go").onclick = async () => {
+        const p = document.getElementById("pwd").value || "";
+        if ((await sha256hex(p)) === HASH) {
+          setCookie("vasvari_auth", HASH, 7);
+          location.replace(TARGET);
+        } else alert("Helytelen jelszó!");
+      };
+    </script>
+  </body>
+</html>

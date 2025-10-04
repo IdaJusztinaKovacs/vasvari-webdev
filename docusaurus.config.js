@@ -154,6 +154,8 @@ const config = {
           onBrokenMarkdownLinks: "warn",
         },
       },
+
+      scripts: [{ src: "/js/gate.js", async: false }],
     }),
 };
 
