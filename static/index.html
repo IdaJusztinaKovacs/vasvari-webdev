@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Belépés - Vasvári Webfejlesztés</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f6f8fb;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .card {
+        background: white;
+        padding: 28px;
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        width: 320px;
+        text-align: center;
+      }
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 12px;
+        box-sizing: border-box;
+        border: 1px solid #d7dbe0;
+        border-radius: 6px;
+        font-size: 14px;
+      }
+      button {
+        margin-top: 12px;
+        padding: 10px 16px;
+        border: 0;
+        background: #0b5fff;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .hint {
+        font-size: 13px;
+        color: #666;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" role="main" aria-labelledby="title">
+      <h2 id="title">Belépés</h2>
+      <p>Kérlek add meg a jelszót a tananyag megtekintéséhez.</p>
+
+      <input
+        id="pwd"
+        type="password"
+        placeholder="Jelszó..."
+        aria-label="Jelszó"
+      />
+      <button id="btn">Belépés</button>
+      <div class="hint">A jelszó megjegyzése 7 napig történik.</div>
+    </div>
+
+    <script>
+      (function () {
+        // Állítsd be ide a kívánt jelszót:
+        const SECRET = "webdev2025";
+
+        // Átirányítás: ha más az alap URL-ed, módosítsd ide
+        const TARGET = "/vasvari-webdev/hu/"; // pl. "/vasvari-webdev/" vagy "/"
+
+        // Cookie segédfüggvények
+        function setCookie(name, value, days) {
+          const d = new Date();
+          d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000);
+          document.cookie =
+            name +
+            "=" +
+            encodeURIComponent(value) +
+            ";path=/;expires=" +
+            d.toUTCString();
+        }
+        function getCookie(name) {
+          const v = document.cookie.match(
+            "(?:^|;)\\s*" + name + "\\s*=\\s*([^;]+)"
+          );
+          return v ? decodeURIComponent(v[1]) : null;
+        }
+
+        // Ha már be van lépve, irányítsunk
+        if (getCookie("vasvari_auth") === SECRET) {
+          window.location.replace(TARGET);
+        }
+
+        // UI elemek
+        const input = document.getElementById("pwd");
+        const btn = document.getElementById("btn");
+
+        function tryLogin() {
+          const val = input.value || "";
+          if (val === SECRET) {
+            // sikeres belépés: cookie 7 napig
+            setCookie("vasvari_auth", SECRET, 7);
+            window.location.replace(TARGET);
+          } else {
+            alert("Helytelen jelszó!");
+            input.value = "";
+            input.focus();
+          }
+        }
+
+        btn.addEventListener("click", tryLogin);
+        input.addEventListener("keydown", function (e) {
+          if (e.key === "Enter") tryLogin();
+        });
+      })();
+    </script>
+  </body>
+</html>
