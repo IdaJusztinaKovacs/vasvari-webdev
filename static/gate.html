@@ -4,12 +4,47 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Belépés</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh; /* teljes magasság */
+        display: flex;
+        justify-content: center; /* vízszintesen középre */
+        align-items: center; /* függőlegesen középre */
+        background-color: #f5f5f5; /* csak hogy szebb legyen */
+        font-family: Arial, sans-serif;
+      }
+
+      div {
+        text-align: center;
+        padding: 20px 40px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      input {
+        padding: 8px;
+        font-size: 1em;
+        margin-top: 10px;
+      }
+
+      button {
+        margin-left: 10px;
+        padding: 8px 16px;
+        font-size: 1em;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
-    <h2>Belépés</h2>
-    <p>Írd be a jelszót:</p>
-    <input id="pwd" type="password" autofocus />
-    <button id="go">Belépés</button>
+    <div class="center">
+      <h2>Belépés</h2>
+      <p>Írd be a jelszót:</p>
+      <input id="pwd" type="password" autofocus />
+      <button id="go">Belépés</button>
+    </div>
+
     <script>
       const BASE = "/vasvari-webdev/"; // ← ha nálad más az alapút, írd át
       const TARGET = BASE; // pl. BASE+"hu/" ha oda akarsz beléptetni
