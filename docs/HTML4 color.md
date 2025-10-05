@@ -1,6 +1,6 @@
 ---
 id: html4-color
-title: 4. Színek megadása HTML-ben és CSS-ben
+title: 4. tananyag
 sidebar_position: 4
 ---
 

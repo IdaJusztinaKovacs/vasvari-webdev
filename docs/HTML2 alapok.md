@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: 2. HTML alapok II
+title: 2. tananyag
 ---
 
 # 2. HTML alapok II.

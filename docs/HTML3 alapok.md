@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: 3. HTML alapok III
+title: 3. tananyag
 ---
 
 # 3. HTML alapok III

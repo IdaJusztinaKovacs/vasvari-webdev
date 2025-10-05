@@ -44,3 +44,8 @@
 .medve-img {
   width: 400px;
 }
+
+.theme-doc-sidebar-item-link {
+  font-size: 15px;
+  line-height: 1.6; /* ha még mindig vágódik */
+}
