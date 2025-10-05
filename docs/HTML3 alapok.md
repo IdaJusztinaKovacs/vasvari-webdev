@@ -9,6 +9,12 @@ title: 3. HTML alapok III
 
 ---
 
+A HTML nemcsak szöveget, hanem jeleket és formázást is leír. De vannak
+olyan karakterek, amiket a böngésző nem tud "betűként" értelmezni, mert
+parancsnak gondolja őket – például a `<`, `>` vagy az `&`. Ezeket
+karakterentitásokkal tudjuk megjeleníteni.
+
+A karakterentitások speciális kódok, amik egy-egy jelet helyettesítenek.
 A karakterentitás három részből áll:
 
 az elején `&` jel, a végén `;` jel
@@ -18,9 +24,14 @@ az elején `&` jel, a végén `;` jel
 
 A legtöbbet alkalmazott karakterentitás:
 
-- a nem törhető szóköz, azaz az `&nbsp;`
+- A nem törhető szóköz, azaz az `&nbsp;`
+- A `&lt;` és `&gt;` nagyon gyakori, ha kódot akarunk megmutatni a weboldalon.
 
 ![Karakterentások](/img/Karakterentitas.png)
+
+:::tip
+A nem törhető szóközt sokszor használjuk táblázatokban vagy címekben, hogy ne essen szét a szöveg.
+:::
 
 ## Szakaszok
 
