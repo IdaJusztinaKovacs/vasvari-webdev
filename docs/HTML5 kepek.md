@@ -140,7 +140,7 @@ A `<figure>` elem egy HTML5 strukturális elem, amit arra használnak, hogy egy 
 ```
 
 :::info
-**Miért hasznos? a `<figure>` elem?**  
+**Miért hasznos a `<figure>` elem?**  
 **Szemantikailag pontosabb** – a böngésző és a keresőmotorok tudják, hogy ez a kép és a felirat összetartozik.  
 **Hozzáférhetőség (Accessibility)** – a képernyőolvasók helyesen olvassák fel a képet és a feliratát.  
 **Stílus szempontból rendezett** – CSS-ben könnyen formázhatod a képet és a feliratot együtt.  
