@@ -10,7 +10,7 @@
         --fg: #111;
         --card: #fff;
         --muted: #666;
-        --accent: #2563eb;
+        --accent: #2e8555;
         --shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
         --radius: 14px;
         --space: clamp(16px, 2.5vw, 28px);
@@ -24,7 +24,7 @@
           --fg: #e9e9ea;
           --card: #141416;
           --muted: #9aa0a6;
-          --accent: #8ab4f8;
+          --accent: #82eeb3;
           --shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
         }
       }
@@ -169,7 +169,6 @@
 
         <div class="actions">
           <button id="go" class="primary" type="submit">Belépés</button>
-          <span class="hint">Nyomd meg az Entert is!</span>
         </div>
       </form>
     </main>
@@ -200,8 +199,6 @@
 
         const pass = (pwd.value || "").trim();
         const inputHash = await sha256hex(pass);
-
-        // console.log("calc:", inputHash, "expected:", HASH);
 
         if (inputHash === HASH) {
           try {
