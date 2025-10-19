@@ -116,28 +116,24 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Community",
+            title: "Közösség",
             items: [
               {
                 label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                href: "https://stackoverflow.com/",
               },
               {
                 label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "X",
-                href: "https://x.com/docusaurus",
+                href: "https://discord.com/",
               },
             ],
           },
           {
-            title: "More",
+            title: "Továbbiak",
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://github.com/",
               },
             ],
           },

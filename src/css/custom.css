@@ -49,3 +49,29 @@
   font-size: 15px;
   line-height: 1.6;
 }
+/* lábléc top/bottom padding */
+.footer {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+/* vékony elválasztó felül */
+.footer__bottom {
+  border-top: 1px solid var(--ifm-toc-border-color);
+}
+
+/* erősebb oszlopcímek */
+.footer__title {
+  font-weight: 700;
+}
+
+/* kisebb, halványabb copyright */
+.footer__copyright {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* ha zavar az „külső link” kis ikon a linkek után, rejtsd el: */
+.footer__link-item svg {
+  display: none;
+}
