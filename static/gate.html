@@ -134,6 +134,7 @@
       }
 
       /* Kis kijelzőkön több hely a tapnak */
+
       @media (max-width: 480px) {
         .input-row {
           flex-direction: column;
@@ -141,6 +142,15 @@
 
         button.primary {
           width: 100%;
+        }
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 10vh 24px; /* több függőleges tér, és vízszintesen is több margó */
+        }
+        .card {
+          padding: clamp(24px, 6vw, 40px); /* belső tér növelése */
         }
       }
     </style>
