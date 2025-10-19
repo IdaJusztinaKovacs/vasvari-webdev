@@ -220,7 +220,7 @@ Például a táblázat első sora tartalmazta a fejlécet, a második sor két c
 Ez a módszer ma már **elavult**, mivel a modern **CSS layout technikák** (pl. _Flexbox_, _Grid_) sokkal rugalmasabbak.
 :::
 
-### HTML szintaxis
+### 1. HTML szintaxis
 
 Táblázatokat a `<table>` tag segítségével lehet létrehozni.  
 Egy tábla **sorokat** (`<tr>`) tartalmaz, és minden sor **cellákból** (`<th>` vagy `<td>`) áll.
@@ -251,7 +251,7 @@ Ha szeretnénk egy táblázatnak címet adni, akkor ezt a `<caption>...</caption
 </table>
 ```
 
-### `<table>` címke
+### 2. `<table>` címke
 
 A táblázatot a `<table>` elemmel kezdjük. Ez az elem tartalmazza a teljes táblázatot.
 
@@ -263,7 +263,7 @@ Példa táblázat létrehozására:
 </table>
 ```
 
-### `<tr>` címke
+### 3. `<tr>` címke
 
 A táblázatsorokat a `<tr>` (table row) elemmel definiáljuk. Minden sor tartalmazza a táblázat egy sorát.
 
@@ -280,7 +280,7 @@ Példa táblázatsorok létrehozására:
 </table>
 ```
 
-### `<td>` címke
+### 4. `<td>` címke
 
 A táblázat adatait a `<td>` (table data) elemmel definiáljuk. Ezek tartalmazzák a tényleges adatokat, amelyek a táblázatban megjelennek.
 
@@ -299,7 +299,7 @@ Példa az adatok létrehozására:
 </table>
 ```
 
-### `<th>` címke
+### 5. `<th>` címke
 
 A táblázat fejléceit a `<th>` (table header) elemmel definiáljuk. Ezek általában félkövér vagy más formázásúak, és a táblázat oszlopainak címeit tartalmazzák.
 
@@ -318,7 +318,7 @@ Példa a fejlécek létrehozására:
 </table>
 ```
 
-### `<caption>` címke
+### 6. `<caption>` címke
 
 A táblázathoz hozzáadhatunk egy címsort a `<caption>` elem segítségével, amely leírja a táblázat tartalmát vagy célját.
 
@@ -340,7 +340,7 @@ Példa címsor hozzáadására a táblázathoz:
 </table>
 ```
 
-### Táblázat szegélyek
+### 7. Táblázat szegélyek
 
 Alapértelmezetten a HTML-táblázatok szegély nélkül jelennek meg.
 A cellák köré **border** attribútummal vagy CSS segítségével rajzolhatunk keretet.
@@ -360,14 +360,14 @@ A cellák köré **border** attribútummal vagy CSS segítségével rajzolhatunk
 
 ![Táblázat](/img/tablazat.jpg)
 
-### Táblázat kialakításának általános szabályai
+### 8. Táblázat kialakításának általános szabályai
 
 - a táblázat minden oszlopában azonos számú cellának kell lennie
 - egy adott oszlopban a cellák szélessége mindig azonos
 - az azonos számú és szélességű celláktól csak sor- és oszlopátfogással ( azaz cellák egyesítésével ) lehet eltérni
 - ha a táblázat üres cellákat is tartalmaz, akkor azt is be kell kódolni úgy, hogy a `<th></th>` vagy `<td></td>` tagokat üres tartalommal definiáljuk (egyébként felborul a táblázat szerkezete)
 
-### Táblázatok formázása
+### 9. Táblázatok formázása
 
 A táblázatok formázásához elsősorban a CSS-t ajánlott, de bizonyos, a HTML5 által nem támogatott attribútumok segítségével néhány alaptulajdonságot foglaltunk össze az alábbi táblázatban.
 
@@ -406,7 +406,7 @@ A fenti attribútumok továbbra is felismerhetők a böngészőkben, de a **HTML
 és **nem javasolt a használatuk új weboldalakon**.
 :::
 
-### Cellák átfogása (cellaösszevonás)
+### 10. Cellák átfogása (cellaösszevonás)
 
 Egy-egy cella több oszlopot vagy több sort is átfoghat: a `<th>` és a `<td>` tagok nyitó címkéjében alkalmazhatjuk a **colspan (colspan = column spanning = oszlop átfogás)**, illetve a **rowspan (rowspan = row spanning = sor átfogás)** jellemzőket. Ezen jellemzőknek értékül az a számot kell adnunk, ahány oszlopot, illetve ahány sort szeretnénk összevonni (egyesíteni).
 
@@ -484,7 +484,7 @@ Sorok összevonása esetén az **egymás alatti cellákat** vonjuk össze
 
 ![Sorok osszevonása](/img/rowspan.jpg)
 
-### Nagyméretű táblázatok szerkezeti egységei
+### 11. Nagyméretű táblázatok szerkezeti egységei
 
 Nagyméretű táblázatoknál a szerkezet áttekinthetőségét segítik elő a `<thead>`, `<tbody>` és `<tfoot>` HTML-címkék.
 Ezek logikai egységekre bontják a táblázatot: a fejlécre, a törzsre és a láblécre.
@@ -545,7 +545,7 @@ Ezek logikai egységekre bontják a táblázatot: a fejlécre, a törzsre és a 
 
 ![Cellaátfogás](/img/cellaatfogas.jpg)
 
-### Oszlopcsoportok formázása: `<col>` és `<colgroup>`
+### 12. Oszlopcsoportok formázása: `<col>` és `<colgroup>`
 
 Ha szeretnénk a táblázat oszlopait csoportosítani (pl. formázás céljából), akkor ezt a `<colgroup>...</colgroup>` taggel tehetjük meg. Ezt közvetlenül a `<caption>` után (ha van caption) és a `<thead>` elé (ha van thead) írjuk. Az oszlopcsoportosításon belül a `<col/>` páratlan tag jelöl egy oszlopot. Ha egyszerre több, mondjuk N darab oszlopot szeretnénk kijelölni a csoportosításban, akkor ezt a `<col span="N"/>` segítségével tudjuk megtenni.
 
@@ -553,7 +553,7 @@ Ha szeretnénk a táblázat oszlopait csoportosítani (pl. formázás céljábó
 Egyszerűen fogalmazva:
 
 - `<colgroup>`: egy oszlopcsoportot jelöl (tehát több oszlopot foghat össze).
-- `<col>`:egy konkrét oszlopot jelöl a táblázatban.
+- `<col>`: egy konkrét oszlopot jelöl a táblázatban.
 
 Ezek nem látszanak magukban, de stílust lehet hozzájuk rendelni (pl. háttérszín, szélesség stb.)
 :::
