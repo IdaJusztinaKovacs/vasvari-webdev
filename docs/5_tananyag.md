@@ -1,10 +1,9 @@
 ---
-id: html5-kepek
-title: 5. tananyag
+id: 5_tananyag
 sidebar_position: 5
+sidebar_label: "5. tananyag"
+title: "5. Képek elhelyezése"
 ---
-
-# 5. Képek elhelyezése
 
 ## 1. A képek szerepe a weboldalon
 

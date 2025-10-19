@@ -1,10 +1,9 @@
 ---
-id: html4-color
-title: 4. tananyag
+id: 4_tananyag
 sidebar_position: 4
+sidebar_label: "4. tananyag"
+title: "4. Színek megadása HTML-ben és CSS-ben"
 ---
-
-# 4. Színek megadása HTML-ben és CSS-ben
 
 ## Színkeverés
 

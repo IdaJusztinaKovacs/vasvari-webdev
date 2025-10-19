@@ -1,9 +1,9 @@
 ---
+id: 3_tananyag
 sidebar_position: 3
-title: 3. tananyag
+sidebar_label: "3. tananyag"
+title: "3. HTML alapok III."
 ---
-
-# 3. HTML alapok III
 
 ## Karakterentitások
 

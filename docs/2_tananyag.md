@@ -5,8 +5,6 @@ sidebar_label: "2. tananyag"
 title: "2. HTML alapok II."
 ---
 
-# 2. HTML alapok II.
-
 ## A head (fejrész) fontosabb tagjei
 
 ---
