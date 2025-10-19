@@ -55,11 +55,6 @@
   padding-bottom: 2rem;
 }
 
-/* vékony elválasztó felül */
-.footer__bottom {
-  border-top: 1px solid var(--ifm-toc-border-color);
-}
-
 /* erősebb oszlopcímek */
 .footer__title {
   font-weight: 700;

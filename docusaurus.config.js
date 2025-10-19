@@ -106,7 +106,7 @@ const config = {
           },
 
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/",
             label: "GitHub",
             position: "right",
           },
@@ -134,6 +134,16 @@ const config = {
               {
                 label: "GitHub",
                 href: "https://github.com/",
+              },
+            ],
+          },
+
+          {
+            title: "Kapcsolat",
+            items: [
+              {
+                llabel: "E-mail",
+                href: "mailto:kovacs.ida@vasvari.org",
               },
             ],
           },
