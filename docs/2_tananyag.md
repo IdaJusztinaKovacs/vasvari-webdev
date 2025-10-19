@@ -1,6 +1,8 @@
 ---
+id: 2_tananyag
 sidebar_position: 2
-title: 2. tananyag
+sidebar_label: "2. tananyag"
+title: "2. HTML alapok II."
 ---
 
 # 2. HTML alapok II.
