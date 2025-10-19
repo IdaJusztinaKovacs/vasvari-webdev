@@ -251,7 +251,7 @@ Ha szeretnénk egy táblázatnak címet adni, akkor ezt a `<caption>...</caption
 </table>
 ```
 
-### `table` címke
+### `<table>` címke
 
 A táblázatot a `<table>` elemmel kezdjük. Ez az elem tartalmazza a teljes táblázatot.
 
@@ -263,7 +263,7 @@ Példa táblázat létrehozására:
 </table>
 ```
 
-### `tr` címke
+### `<tr>` címke
 
 A táblázatsorokat a `<tr>` (table row) elemmel definiáljuk. Minden sor tartalmazza a táblázat egy sorát.
 
