@@ -1,10 +1,9 @@
 ---
 id: 1_tananyag
 sidebar_position: 1
-title: 1. tananyag
+sidebar_label: "1. tananyag" # ez jelenik meg a sidebarban és a breadcrumbben
+title: "1. HTML alapok" # ez lesz az oldal címe, HA NINCS H1 a tartalomban
 ---
-
-# 1. HTML alapok
 
 ## Mi az a HTML?
 
