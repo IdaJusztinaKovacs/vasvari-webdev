@@ -35,6 +35,8 @@ A nem törhető szóközt sokszor használjuk táblázatokban vagy címekben, ho
 
 ## Szakaszok
 
+---
+
 HTML-ben lehetőségünk van a weboldal tartalmának strukturálására is. Ezt szakaszok, tartalmi egységek kialakításával tehetjük meg.
 
 A `<div>...</div>` egy általános célú blokkszintű (block) szakasz. A blokkszintű elemek mindig új sorban kezdődnek, és kihasználják a teljes rendelkezésre álló szélességet.
@@ -69,6 +71,8 @@ Egy sorszintű (inline) HTML elem nem tartalmazhat blokkszintű (block) elemet!!
 ```
 
 ## Az id és class attribútumok
+
+---
 
 Minden HTML objektumnak adható egyedi azonosító, illetve minden HTML objektum csoportosítható osztályokba. Ezek alapvetően majd CSS-ben lesznek hasznosak, amikor egy-egy objektumra vagy objektumok csoportjára szeretnénk hivatkozni.
 
@@ -112,6 +116,8 @@ Minden HTML objektumnak adható egyedi azonosító, illetve minden HTML objektum
 
 ## A HTML5 szemantikus tagek
 
+---
+
 - `<header>...</header>:` Címsor/fejléc elem. Általában a szakasz címsorát (h1-h6 vagy hgroup) helyezik itt el.
 - `<footer>...</footer>:` Az oldal vagy egy tartalmi egység lábléce
 - `<nav>...</nav>:` Navigációs menü, itt kapnak helyet az oldal fontosabb navigációs (más helyekre mutató) elemei
@@ -129,6 +135,8 @@ A HTML5-ben bevezetett szemantikus tageket felhasználva precízebben leírhatju
 ![Szemantikus tag-ek](/img/szemantikus_tag.png)
 
 ## Listák
+
+---
 
 A HTML listák lehetőséget biztosítanak arra, hogy egymáshoz kapcsolódó információkat egy csoportba gyűjtve sorolhassunk fel. Két fontos listatípus:
 
@@ -196,3 +204,343 @@ A fenti listatípusokból készíthetünk **többszintű listát** is. Ennek a l
 ```
 
 ## Táblázatok
+
+---
+
+A **táblázatok** segítségével mátrix-szerű, _kétdimenziós adathalmazt_ tudunk megjeleníteni.  
+Egy táblázat feladata az **összetartozó adatok** egymáshoz való viszonyának **áttekinthető megjelenítése**.
+
+A táblázat **sorokból**, **oszlopokból**, **fejlécekből** és (opcionálisan) egy **címrészből** áll.  
+A sorok és oszlopok által alkotott **cellák** tartalmazzák a táblázat adatait — ezek lehetnek **szövegek, számok, képek, listák vagy akár újabb táblázatok is.**
+
+:::info Régi gyakorlat
+A weblapkészítés korai időszakában a táblázatokat gyakran az **oldalak elrendezésére** is használták.  
+Például a táblázat első sora tartalmazta a fejlécet, a második sor két cellájában a menü és a tartalom kapott helyet.
+
+Ez a módszer ma már **elavult**, mivel a modern **CSS layout technikák** (pl. _Flexbox_, _Grid_) sokkal rugalmasabbak.
+:::
+
+### HTML szintaxis
+
+Táblázatokat a `<table>` tag segítségével lehet létrehozni.  
+Egy tábla **sorokat** (`<tr>`) tartalmaz, és minden sor **cellákból** (`<th>` vagy `<td>`) áll.
+
+Ha szeretnénk egy táblázatnak címet adni, akkor ezt a `<caption>...</caption>` taggel tehetjük meg, amit mindig közvetlenül a `<table>` után kell írnunk.
+
+```html
+<!-- A <table> elem hozza létre a táblázatot -->
+<table>
+  <!-- A táblázat címét a <caption> jelöli -->
+  <caption>
+    Osztály névsora és életkora
+  </caption>
+
+  <!-- Egy táblázat sorát a <tr> (table row) jelöli -->
+  <tr>
+    <!-- A <th> (table header) a fejléc-cella, ami alapból félkövér és középre igazított -->
+    <th>Név</th>
+    <th>Kor</th>
+  </tr>
+
+  <!-- Egy újabb sor a táblázatban -->
+  <tr>
+    <!-- A <td> (table data) egy adatcellát jelöl -->
+    <td>Kovács Anna</td>
+    <td>23</td>
+  </tr>
+</table>
+```
+
+### `table` címke
+
+A táblázatot a `<table>` elemmel kezdjük. Ez az elem tartalmazza a teljes táblázatot.
+
+Példa táblázat létrehozására:
+
+```html
+<table>
+  <!-- táblázat tartalma ide kerül -->
+</table>
+```
+
+### `tr` címke
+
+A táblázatsorokat a `<tr>` (table row) elemmel definiáljuk. Minden sor tartalmazza a táblázat egy sorát.
+
+Példa táblázatsorok létrehozására:
+
+```html
+<table>
+  <tr>
+    <!-- első sor tartalma ide kerül -->
+  </tr>
+  <tr>
+    <!-- második sor tartalma ide kerül -->
+  </tr>
+</table>
+```
+
+### `<td>` címke
+
+A táblázat adatait a `<td>` (table data) elemmel definiáljuk. Ezek tartalmazzák a tényleges adatokat, amelyek a táblázatban megjelennek.
+
+Példa az adatok létrehozására:
+
+```html
+<table>
+  <tr>
+    <td>Cella 1</td>
+    <td>Cella 2</td>
+  </tr>
+  <tr>
+    <td>Cella 3</td>
+    <td>Cella 4</td>
+  </tr>
+</table>
+```
+
+### `<th>` címke
+
+A táblázat fejléceit a `<th>` (table header) elemmel definiáljuk. Ezek általában félkövér vagy más formázásúak, és a táblázat oszlopainak címeit tartalmazzák.
+
+Példa a fejlécek létrehozására:
+
+```html
+<table>
+  <tr>
+    <th>Fejléc: Oszlop 1</th>
+    <th>Fejléc: Oszlop 2</th>
+  </tr>
+  <tr>
+    <td>Adat 1</td>
+    <td>Adat 2</td>
+  </tr>
+</table>
+```
+
+### `<caption>` címke
+
+A táblázathoz hozzáadhatunk egy címsort a `<caption>` elem segítségével, amely leírja a táblázat tartalmát vagy célját.
+
+Példa címsor hozzáadására a táblázathoz:
+
+```html
+<table>
+  <caption>
+    Ez egy példa táblázat
+  </caption>
+  <tr>
+    <th>Oszlop 1</th>
+    <th>Oszlop 2</th>
+  </tr>
+  <tr>
+    <td>Adat 1</td>
+    <td>Adat 2</td>
+  </tr>
+</table>
+```
+
+### Táblázat szegélyek
+
+Alapértelmezetten a HTML-táblázatok szegély nélkül jelennek meg.
+A cellák köré **border** attribútummal vagy CSS segítségével rajzolhatunk keretet.
+
+```html
+<table border="1">
+  <tr>
+    <td>1. sor, 1. cella</td>
+    <td>1. sor, 2. cella</td>
+  </tr>
+  <tr>
+    <td>2. sor, 1. cella</td>
+    <td>2. sor, 2. cella</td>
+  </tr>
+</table>
+```
+
+![Táblázat](/img/tablazat.jpg)
+
+### Táblázat kialakításának általános szabályai
+
+- a táblázat minden oszlopában azonos számú cellának kell lennie
+- egy adott oszlopban a cellák szélessége mindig azonos
+- az azonos számú és szélességű celláktól csak sor- és oszlopátfogással ( azaz cellák egyesítésével ) lehet eltérni
+- ha a táblázat üres cellákat is tartalmaz, akkor azt is be kell kódolni úgy, hogy a `<th></th>` vagy `<td></td>` tagokat üres tartalommal definiáljuk (egyébként felborul a táblázat szerkezete)
+
+### Táblázatok formázása
+
+A táblázatok formázásához elsősorban a CSS-t ajánlott, de bizonyos, a HTML5 által nem támogatott attribútumok segítségével néhány alaptulajdonságot foglaltunk össze az alábbi táblázatban.
+
+<div style={{overflowX: "auto"}}>
+
+| attribútum      | lehetséges értékei                  | funkció, jelentés                                                                                                            | táblázat | sor | adatcella |
+| --------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | :------: | :-: | :-------: |
+| **width**       | szám (pixelérték) vagy %            | az elem szélessége képpontban megadva vagy az aktuális ablakmérethez / táblázat teljes szélességéhez viszonyítva (arányában) |    X     |     |     X     |
+| **height**      | szám (pixelérték) vagy %            | az adatcella magassága képpontban megadva vagy a táblázat teljes magasságához viszonyítva (arányában)                        |          |     |     X     |
+| **align**       | left, center, right / justify, char | a táblázat vízszintes igazítása az aktuális ablakszélességhez viszonyítva / a cellaszélességhez viszonyítva                  |    X     |  X  |     X     |
+| **valign**      | top, middle, bottom, baseline       | a sor celláiban / egy adott cellában lévő tartalom függőleges igazítása                                                      |          |  X  |     X     |
+| **bgcolor**     | színkód / színnév                   | a teljes táblázat / a sor / egy adott cella háttérszíne                                                                      |    X     |  X  |     X     |
+| **nowrap**      | nowrap                              | a cella tartalma nem tördelhető                                                                                              |          |     |     X     |
+| **border**      | szám (pixelérték)                   | a táblázat szegélyének vastagsága képpontban                                                                                 |    X     |     |           |
+| **cellpadding** | szám (pixelérték)                   | cella belső margójának (cellabelső) értéke képpontban                                                                        |    X     |     |           |
+| **cellspacing** | szám (pixelérték)                   | cellák közötti távolság (cellaköz) értéke képpontban                                                                         |    X     |     |           |
+
+</div>
+
+---
+
+#### Régi attribútumok modern CSS megfelelői
+
+| Régi attribútum                            | Modern CSS megfelelő                                            |
+| ------------------------------------------ | --------------------------------------------------------------- |
+| `<table border="1">`                       | `table { border: 1px solid black; border-collapse: collapse; }` |
+| `<td bgcolor="yellow">`                    | `td { background-color: yellow; }`                              |
+| `<td align="center">`                      | `td { text-align: center; }`                                    |
+| `<td valign="top">`                        | `td { vertical-align: top; }`                                   |
+| `<table width="80%">`                      | `table { width: 80%; }`                                         |
+| `<table cellpadding="10" cellspacing="5">` | `td { padding: 10px; } table { border-spacing: 5px; }`          |
+
+:::info Összegzés
+A táblázatok formázásához ma már kizárólag **CSS-t** használunk.  
+A fenti attribútumok továbbra is felismerhetők a böngészőkben, de a **HTML5 szabvány szerint elavultak**,  
+és **nem javasolt a használatuk új weboldalakon**.
+:::
+
+### Cellák átfogása (cellaösszevonás)
+
+Egy-egy cella több oszlopot vagy több sort is átfoghat: a `<th>` és a `<td>` tagok nyitó címkéjében alkalmazhatjuk a **colspan (colspan = column spanning = oszlop átfogás)**, illetve a **rowspan (rowspan = row spanning = sor átfogás)** jellemzőket. Ezen jellemzőknek értékül az a számot kell adnunk, ahány oszlopot, illetve ahány sort szeretnénk összevonni (egyesíteni).
+
+#### Példa oszlopok összevonásra
+
+Oszlopok összevonása esetén az **egymás melletti cellákat** vonjuk össze.
+
+```html
+<table border="1" style="border-collapse: collapse">
+  <caption>
+    Oszlopok összevonása
+  </caption>
+
+  <!-- A fejléc első sora, ahol a "Évek" cella három oszlopon terjed ki -->
+  <tr>
+    <th colspan="3">Évek</th>
+  </tr>
+
+  <!-- A második fejlécsor: külön oszlopok az évekhez -->
+  <tr>
+    <th>2000.</th>
+    <th>2010.</th>
+    <th>2017.</th>
+  </tr>
+
+  <!-- Táblázat adatsorai -->
+  <tr>
+    <td>12</td>
+    <td>24</td>
+    <td>48</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>28</td>
+    <td>40</td>
+  </tr>
+</table>
+```
+
+![Oszlop osszevonás](/img/colspan.jpg)
+
+#### Példa sorok összevonására
+
+Sorok összevonása esetén az **egymás alatti cellákat** vonjuk össze
+
+```html
+<table border="1" style="border-collapse: collapse">
+  <caption>
+    Sorok összevonása
+  </caption>
+
+  <tr>
+    <td rowspan="5">Osztályok</td>
+    <td>9.a</td>
+    <td>25 fő</td>
+  </tr>
+  <tr>
+    <td>9.b</td>
+    <td>32 fő</td>
+  </tr>
+  <tr>
+    <td>9.c</td>
+    <td>28 fő</td>
+  </tr>
+  <tr>
+    <td>10.a</td>
+    <td>18 fő</td>
+  </tr>
+  <tr>
+    <td>10.c</td>
+    <td>30 fő</td>
+  </tr>
+</table>
+```
+
+![Sorok osszevonása](/img/rowspan.jpg)
+
+### Nagyméretű táblázatok szerkezeti egységei
+
+Nagyméretű táblázatoknál a szerkezet áttekinthetőségét segítik elő a `<thead>`, `<tbody>` és `<tfoot>` HTML-címkék.
+Ezek logikai egységekre bontják a táblázatot: a fejlécre, a törzsre és a láblécre.
+
+| Címke     | Jelentése | Leírás                                                     |
+| --------- | --------- | ---------------------------------------------------------- |
+| `<thead>` | Fejléc    | Az oszlopok címét tartalmazza, általában `<th>` elemekkel. |
+| `<tbody>` | Törzs     | A tényleges adatokat tartalmazó sorok kerülnek ide.        |
+| `<tfoot>` | Lábléc    | A táblázat összegző, záró adatai (pl. „Összesen” sor).     |
+
+#### Példa: a thead, tbody, tfoot használata
+
+```html
+<table border="1" style="border-collapse: collapse; text-align: center;">
+  <caption>
+    Osztálylétszámok évfolyamonként
+  </caption>
+
+  <thead>
+    <tr>
+      <th>Évfolyam</th>
+      <th>Osztály</th>
+      <th>Létszám</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>9.</td>
+      <td>9.a</td>
+      <td>25 fő</td>
+    </tr>
+    <tr>
+      <td>9.</td>
+      <td>9.b</td>
+      <td>32 fő</td>
+    </tr>
+    <tr>
+      <td>10.</td>
+      <td>10.a</td>
+      <td>18 fő</td>
+    </tr>
+    <tr>
+      <td>10.</td>
+      <td>10.c</td>
+      <td>30 fő</td>
+    </tr>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td colspan="2" style="text-align: right;"><strong>Összesen:</strong></td>
+      <td><strong>105 fő</strong></td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+![Cellaátfogás](/img/cellaatfogas.jpg)
