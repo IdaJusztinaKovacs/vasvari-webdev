@@ -544,3 +544,61 @@ Ezek logikai egységekre bontják a táblázatot: a fejlécre, a törzsre és a 
 ```
 
 ![Cellaátfogás](/img/cellaatfogas.jpg)
+
+### Oszlopcsoportok formázása: `<col>` és `<colgroup>`
+
+Ha szeretnénk a táblázat oszlopait csoportosítani (pl. formázás céljából), akkor ezt a `<colgroup>...</colgroup>` taggel tehetjük meg. Ezt közvetlenül a `<caption>` után (ha van caption) és a `<thead>` elé (ha van thead) írjuk. Az oszlopcsoportosításon belül a `<col/>` páratlan tag jelöl egy oszlopot. Ha egyszerre több, mondjuk N darab oszlopot szeretnénk kijelölni a csoportosításban, akkor ezt a `<col span="N"/>` segítségével tudjuk megtenni.
+
+:::info
+Egyszerűen fogalmazva:
+
+- `<colgroup>`: egy oszlopcsoportot jelöl (tehát több oszlopot foghat össze).
+- `<col>`:egy konkrét oszlopot jelöl a táblázatban.
+
+Ezek nem látszanak magukban, de stílust lehet hozzájuk rendelni (pl. háttérszín, szélesség stb.)
+:::
+
+:::caution
+**Fontos elhelyezési szabály**: A `<colgroup>` és `<col>` tagek a `<caption>` után, de az első `<tr>` elé kerülnek.
+:::
+
+#### Példa az oszlopformázásra
+
+```html
+<table>
+  <caption>
+    Kínálatunk
+  </caption>
+  <colgroup>
+    <!-- az első oszlop világospiros háttérszínű lesz -->
+    <col style="background-color: salmon;" />
+    <!-- a következő 2 oszlop világoszöld háttérszínt kap -->
+    <col style="background-color: lightgreen;" span="2" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th id="nev">Hamburger neve</th>
+      <th id="ar">Ár</th>
+      <th id="extra">Rendelés esetén jár még</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td headers="nev">Sajtos</td>
+      <td headers="ar">1800 Ft</td>
+      <td headers="extra" rowspan="2">Ajándék szósz és üdítő</td>
+    </tr>
+    <tr>
+      <td headers="nev">Franciasalátás</td>
+      <td headers="ar">2000 Ft</td>
+    </tr>
+    <tr>
+      <td headers="nev">Hawaii</td>
+      <td headers="ar extra" colspan="2">NEM RENDELHETŐ!</td>
+    </tr>
+  </tbody>
+  <!-- itt még lehetne akár egy <tfoot> is, viszont ez opcionális... -->
+</table>
+```
+
+![Oszlopformázás](/img/oszlopformazas.jpg)
