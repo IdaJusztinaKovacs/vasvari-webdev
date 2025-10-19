@@ -1,4 +1,5 @@
 ---
+id: 1_tananyag
 sidebar_position: 1
 title: 1. tananyag
 ---
