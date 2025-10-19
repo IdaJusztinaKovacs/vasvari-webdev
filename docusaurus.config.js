@@ -142,8 +142,25 @@ const config = {
             title: "Kapcsolat",
             items: [
               {
-                llabel: "E-mail",
+                label: "E-mail",
                 href: "mailto:kovacs.ida@vasvari.org",
+              },
+            ],
+          },
+          {
+            title: "Tanulói erőforrások",
+            items: [
+              {
+                label: "Sandbox (StackBlitz)",
+                href: "https://stackblitz.com/",
+              },
+              {
+                label: "Codepen",
+                href: "https://codepen.io/",
+              },
+              {
+                label: "HTML5 UP",
+                href: "https://html5up.net/",
               },
             ],
           },
