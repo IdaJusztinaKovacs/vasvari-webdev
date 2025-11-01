@@ -104,6 +104,12 @@ const config = {
             position: "left",
             label: "HTML",
           },
+          {
+            type: "docSidebar",
+            sidebarId: "CascadingStyleSheetsSidebar",
+            position: "left",
+            label: "CSS",
+          },
 
           {
             href: "https://github.com/",

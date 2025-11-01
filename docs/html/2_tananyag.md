@@ -252,7 +252,7 @@ Alapértelmezés szerint a hivatkozások minden böngészőben így jelennek meg
 </p>
 ```
 
-:::important
+:::important FONTOS
 
 #### Linkek típusai
 
