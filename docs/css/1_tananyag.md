@@ -241,7 +241,7 @@ A `.bev` osztályú elem összes képe piros szegélyt kap.
 A CSS nyelvben a tulajdonságok értékei gyakran **számokkal és mértékegységekkel** vannak meghatározva.
 Mielőtt megismernénk a konkrét formázási szabályokat, célszerű áttekinteni a **leggyakrabban alkalmazott mértékegységeket**, amelyek a méretek, színek, szögek és egyéb arányok beállításánál használatosak.
 
-### 1. Hosszúság megadása:
+### 1. Hosszúság megadása
 - abszolút hosszúság: mm (milliméter), cm (centiméter), in (inch = hüvelyk), pt (pont), px (pixel), pc (pica)
 - relatív hosszúság: *%* (más értékekből számolódik), *em* (betűmérethez viszonyít), *rem* (gyökérelem betűméretéhez viszonyít), *vw* (ablakszélesség 1%-ához viszonyít), *vh* (ablakmagasság 1%-ához viszonyít)
 
@@ -297,10 +297,10 @@ p {
 }
 ```
 
-### 2. Szögek megadása: 
+### 2. Szögek megadása
 - *deg* (fok), *rad* (radián), *grad* (gradián)
 
-### 3. Színek megadása:
+### 3. Színek megadása
 - angol névvel - pl. blue
 - decimális RGB-kóddal - pl. rgb(0, 0, 255)
 - százalékos RGB-kóddal - pl. rgb(0%, 0%, 100%)
