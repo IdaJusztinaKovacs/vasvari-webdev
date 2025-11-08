@@ -137,18 +137,18 @@ A háttérképként alkalmazott kép fizikai méreteitől eltérően, más mére
 ### `background-clip` - háttérkép hatóköre
 
 Alaphelyzetben a háttérkép és a háttérszín hatása (azaz hatóköre) az elem szegélye által határolt területéig terjed ki – ezen bármikor változtathatunk:
-- border-box: a szegélyek külső élei által határolt teljes területig
-- padding-box: a belső margó és a tartalom együttes dobozáig
-- content-box: a tartalom dobozra vonatkozik a megadott érték
+- **border-box**: a szegélyek külső élei által határolt teljes területig
+- **padding-box**: a belső margó és a tartalom együttes dobozáig
+- **content-box**: a tartalom dobozra vonatkozik a megadott érték
 
 ![BackgroundClip](/img/bgclip.jpg)
 
 ### `background-origin` - háttérkép referenciapontja
 
 A hátérképek helyzetének megadásához a pozicionálás referenciapontjának és az ahhoz képest meghatározott helyzetnek az ismerete is szükséges, tehát a lehetséges referenciapont
-- padding-box (alapértelmezés: a belső margódoboz bal felső sarka)
-- content-box: a tartalomdoboz bal felső sarka
-- border-box: a szegélydoboz bal felső sarka
+- **padding-box** (alapértelmezés: a belső margódoboz bal felső sarka)
+- **content-box**: a tartalomdoboz bal felső sarka
+- **border-box**: a szegélydoboz bal felső sarka
 
 Példa:
 ```css
