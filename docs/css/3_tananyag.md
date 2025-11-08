@@ -141,14 +141,7 @@ Alaphelyzetben a háttérkép és a háttérszín hatása (azaz hatóköre) az e
 - padding-box: a belső margó és a tartalom együttes dobozáig
 - content-box: a tartalom dobozra vonatkozik a megadott érték
 
-### `background` - az összes háttértulajdonság összevonása
-
-Példa:
-```css
-body { 
-    background: yellow url(kep.jpg) repeat-x fixed; 
-}
-```
+![BackgroundClip](/img/bgclip.jpg)
 
 ### `background-origin` - háttérkép referenciapontja
 
@@ -160,4 +153,13 @@ A hátérképek helyzetének megadásához a pozicionálás referenciapontjának
 Példa:
 ```css
 body { background-origin: padding-box; }
+```
+
+### `background` - az összes háttértulajdonság összevonása
+
+Példa:
+```css
+body { 
+    background: yellow url(kep.jpg) repeat-x fixed; 
+}
 ```
