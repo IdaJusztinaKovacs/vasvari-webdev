@@ -81,7 +81,7 @@ body {
 }
 ```
 
-### `background-position` - háttérkép összevont tulajdonság
+### `background-position` - háttérkép helyzete: összetett tulajdonság
 A háttérkép vízszintes és függőleges helyzetének (elhelyezkedésének) meghatározása, amelyben egy értékpárt adunk meg: 
 - az első a vízszintes,
 - a második a függőleges elhelyezkedést határozza meg
