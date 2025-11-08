@@ -48,7 +48,7 @@ A legtöbb ilyen tulajdonság a text- előtaggal kezdődik, és a betűtulajdons
 
 - **text-align:** A szöveg vízszintes igazítását határozza meg a tartalmazó elemben. **Értékei:** left, right, center, justify. Például *text-align: center;*.
 
-- **text-justify:** A sorkizárt igazítás során a szóközök kezelésének módját szabályozza. Csak text-align: justify mellett működik. Például *text-justify: inter-word;*.
+- **text-justify:** A sorkizárt igazítás során a szóközök kezelésének módját szabályozza. Csak text-align: justify mellett működik. Például *text-justify: inter-word; (csökkenti vagy növeli a szavak közötti teret)*.
 
 - **vertical-align:** A szöveget vagy képet függőlegesen igazítja soron belül. **Értékei:** baseline, middle, top, bottom. Például *vertical-align: middle; (Táblázatoknál és inline elemeknél lesz különösen fontos.)*
 

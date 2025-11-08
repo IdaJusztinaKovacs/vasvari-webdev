@@ -242,10 +242,11 @@ A CSS nyelvben a tulajdonságok értékei gyakran **számokkal és mértékegys�
 Mielőtt megismernénk a konkrét formázási szabályokat, célszerű áttekinteni a **leggyakrabban alkalmazott mértékegységeket**, amelyek a méretek, színek, szögek és egyéb arányok beállításánál használatosak.
 
 ### 1. Hosszúság megadása
-- abszolút hosszúság: mm (milliméter), cm (centiméter), in (inch = hüvelyk), pt (pont), px (pixel), pc (pica)
-- relatív hosszúság: *%* (más értékekből számolódik), *em* (betűmérethez viszonyít), *rem* (gyökérelem betűméretéhez viszonyít), *vw* (ablakszélesség 1%-ához viszonyít), *vh* (ablakmagasság 1%-ához viszonyít)
+- <u>abszolút hosszúság:</u> **mm** (milliméter), **cm** (centiméter), **in** (inch = hüvelyk), **pt** (pont), **px** (pixel), **pc** (pica)
+- <u>relatív hosszúság:</u> **%** (más értékekből számolódik), **em** (betűmérethez viszonyít), **rem** (gyökérelem - *html* - betűméretéhez viszonyít), **vw** (a **nézetablak** - *viewport, azaz a böngészőablak látható része* - **szélességének 1%-a**), **vh** (a **nézetablak** - *viewport, azaz a böngészőablak látható része* - **magasságának 1%-a**),
+vmin (a viewport rövidebbik oldalának 1%-a)
 
-#### Relatív hosszúság: `em` - az aktuális elem betűméretéhez viszonyít
+#### A) Relatív hosszúság: <code>em</code> – az aktuális elem betűméretéhez viszonyít
 
 - Az `em` értéke az elem saját (vagy örökölt) font-size beállításától függ.
 - **1em = az aktuális betűméret.**
@@ -260,8 +261,8 @@ p {
 ```
 A bekezdés alja 32 pixel távolságra lesz a következő elemtől.
 
-:::warning FIGYELEM: az `em` összegződik
-Ha egymásba ágyazott elemeknek külön `font-size` van megadva, az `em` az aktuális szinthez viszonyít.
+:::warning FIGYELEM: az <code>em</code> összegződik
+Ha egymásba ágyazott elemeknek külön `font-size` van megadva, az <code>em</code> az aktuális szinthez viszonyít.
 
 **Példa:**
 ```css
@@ -280,7 +281,7 @@ span {
 A span végül kisebb lesz, mert a 0.8-as értéket már a 16px-es bekezdésmérethez viszonyítja, nem az eredeti 20px-hez.
 :::
 
-#### Relatív hosszúság: `rem` - a gyökérelem (html) betűméretéhez viszonyít
+#### B) Relatív hosszúság: <code>rem</code> - a gyökérelem (html) betűméretéhez viszonyít
 
 - A `rem` értéke mindig a `<html>` elem `font-size`-ából számolódik.
 - Nem öröklődik minden szinten újra, tehát állandó viszonyítási pont marad.
@@ -296,6 +297,38 @@ p {
   margin-bottom: 2rem; /* mindig 32px */
 }
 ```
+
+#### C) Viewporthoz (nézetablakhoz) viszonyított mértékegységek
+
+A **nézetablak** (angolul *viewport*, vagyis a böngészőablak látható része) méreteihez is viszonyíthatunk, amikor hosszúságot adunk meg a CSS-ben.  
+A nézetablak méretei lehetnek:
+- a **szélesség**,  
+- a **magasság**,  
+- vagy a kettő közül a **kisebbik** vagy **nagyobbik** érték.  
+
+Ehhez négy speciális mértékegység tartozik:
+
+| Egység | Jelentése | Leírás |
+|--------|------------|--------|
+| **vw** (*viewport width*) | a nézetablak szélességének 1%-a | pl. `50vw` = a nézetablak fele |
+| **vh** (*viewport height*) | a nézetablak magasságának 1%-a | pl. `100vh` = a teljes nézetablak magassága |
+| **vmin** (*viewport minimum*) | a nézetablak rövidebbik oldalának 1%-a | mindig a kisebb mérethez igazodik |
+| **vmax** (*viewport maximum*) | a nézetablak hosszabbik oldalának 1%-a | mindig a nagyobb mérethez igazodik |
+
+:::important **Összefoglalva:**  
+- Ezek az egységek mindig a **látható nézetablak századrészei**.  
+- Fekvő (vízszintes) képarány esetén: `1vmax = 1vw`  
+- Álló (függőleges) képarány esetén: `1vmax = 1vh`
+:::
+
+### Betűméret módosítása kulcsszavakkal
+
+A szülőelem betűméretéhez képest a szöveg méretét két kulcsszóval változtathatjuk:
+
+- smaller – kisebb betűméretet állít be a szülőelemhez képest
+- larger – nagyobb betűméretet állít be a szülőelemhez képest
+
+Ezek a kulcsszavak relatív méretezést biztosítanak, vagyis mindig a szülőelem aktuális betűméretéhez igazodnak.
 
 ### 2. Szögek megadása
 - *deg* (fok), *rad* (radián), *grad* (gradián)
