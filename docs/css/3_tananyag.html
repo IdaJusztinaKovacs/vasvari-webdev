@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.1">
 <title data-rh="true">3. CSS - hátterek (szín és kép) beállítása, speciális formázási lehetőségeik | Webfejlesztés</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://IdaJusztinaKovacs.github.io/vasvari-webdev/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://IdaJusztinaKovacs.github.io/vasvari-webdev/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://IdaJusztinaKovacs.github.io/vasvari-webdev/docs/css/3_tananyag"><meta data-rh="true" property="og:locale" content="hu"><meta data-rh="true" name="docusaurus_locale" content="hu"><meta data-rh="true" name="docsearch:language" content="hu"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="3. CSS - hátterek (szín és kép) beállítása, speciális formázási lehetőségeik | Webfejlesztés"><meta data-rh="true" name="description" content="Háttértulajdonságok (background-)"><meta data-rh="true" property="og:description" content="Háttértulajdonságok (background-)"><link data-rh="true" rel="icon" href="/vasvari-webdev/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://IdaJusztinaKovacs.github.io/vasvari-webdev/docs/css/3_tananyag"><link data-rh="true" rel="alternate" href="https://IdaJusztinaKovacs.github.io/vasvari-webdev/docs/css/3_tananyag" hreflang="hu"><link data-rh="true" rel="alternate" href="https://IdaJusztinaKovacs.github.io/vasvari-webdev/docs/css/3_tananyag" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"3. tananyag","item":"https://IdaJusztinaKovacs.github.io/vasvari-webdev/docs/css/3_tananyag"}]}</script><script src="js/gate.js"></script><link rel="stylesheet" href="/vasvari-webdev/assets/css/styles.3ead5a09.css">
-<script src="/vasvari-webdev/assets/js/runtime~main.16f8c907.js" defer="defer"></script>
+<script src="/vasvari-webdev/assets/js/runtime~main.5e94eca9.js" defer="defer"></script>
 <script src="/vasvari-webdev/assets/js/main.2251314d.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -108,17 +108,17 @@ adott értékkel van eltolva a háttérkép (pl. 50px 100px)</li>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="background-clip---háttérkép-hatóköre"><code>background-clip</code> - háttérkép hatóköre<a href="#background-clip---háttérkép-hatóköre" class="hash-link" aria-label="Közvetlen hivatkozás erre: background-clip---háttérkép-hatóköre" title="Közvetlen hivatkozás erre: background-clip---háttérkép-hatóköre" translate="no">​</a></h3>
 <p>Alaphelyzetben a háttérkép és a háttérszín hatása (azaz hatóköre) az elem szegélye által határolt területéig terjed ki – ezen bármikor változtathatunk:</p>
 <ul>
-<li>border-box: a szegélyek külső élei által határolt teljes területig</li>
-<li>padding-box: a belső margó és a tartalom együttes dobozáig</li>
-<li>content-box: a tartalom dobozra vonatkozik a megadott érték</li>
+<li><strong>border-box</strong>: a szegélyek külső élei által határolt teljes területig</li>
+<li><strong>padding-box</strong>: a belső margó és a tartalom együttes dobozáig</li>
+<li><strong>content-box</strong>: a tartalom dobozra vonatkozik a megadott érték</li>
 </ul>
 <p><img decoding="async" loading="lazy" alt="BackgroundClip" src="/vasvari-webdev/assets/images/bgclip-56c2072e6920f30a6f719951b570522a.jpg" width="443" height="694" class="img_ev3q"></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="background-origin---háttérkép-referenciapontja"><code>background-origin</code> - háttérkép referenciapontja<a href="#background-origin---háttérkép-referenciapontja" class="hash-link" aria-label="Közvetlen hivatkozás erre: background-origin---háttérkép-referenciapontja" title="Közvetlen hivatkozás erre: background-origin---háttérkép-referenciapontja" translate="no">​</a></h3>
 <p>A hátérképek helyzetének megadásához a pozicionálás referenciapontjának és az ahhoz képest meghatározott helyzetnek az ismerete is szükséges, tehát a lehetséges referenciapont</p>
 <ul>
-<li>padding-box (alapértelmezés: a belső margódoboz bal felső sarka)</li>
-<li>content-box: a tartalomdoboz bal felső sarka</li>
-<li>border-box: a szegélydoboz bal felső sarka</li>
+<li><strong>padding-box</strong> (alapértelmezés: a belső margódoboz bal felső sarka)</li>
+<li><strong>content-box</strong>: a tartalomdoboz bal felső sarka</li>
+<li><strong>border-box</strong>: a szegélydoboz bal felső sarka</li>
 </ul>
 <p>Példa:</p>
 <div class="language-css codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-css codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token selector" style="color:#00009f">body</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"> </span><span class="token property" style="color:#36acaa">background-origin</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> padding-box</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
