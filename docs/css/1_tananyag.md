@@ -321,7 +321,7 @@ Ehhez négy speciális mértékegység tartozik:
 - Álló (függőleges) képarány esetén: `1vmax = 1vh`
 :::
 
-### Betűméret módosítása kulcsszavakkal
+### 2. Betűméret módosítása kulcsszavakkal
 
 A szülőelem betűméretéhez képest a szöveg méretét két kulcsszóval változtathatjuk:
 
@@ -330,10 +330,10 @@ A szülőelem betűméretéhez képest a szöveg méretét két kulcsszóval vá
 
 Ezek a kulcsszavak relatív méretezést biztosítanak, vagyis mindig a szülőelem aktuális betűméretéhez igazodnak.
 
-### 2. Szögek megadása
+### 3. Szögek megadása
 - *deg* (fok), *rad* (radián), *grad* (gradián)
 
-### 3. Színek megadása
+### 4. Színek megadása
 - angol névvel - pl. blue
 - decimális RGB-kóddal - pl. rgb(0, 0, 255)
 - százalékos RGB-kóddal - pl. rgb(0%, 0%, 100%)
