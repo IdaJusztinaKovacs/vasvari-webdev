@@ -32,7 +32,7 @@
 .markdown h1,
 .markdown h2,
 .markdown h3 {
-  font-weight: normal;
+  font-weight: bold;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 
@@ -49,6 +49,7 @@
   font-size: 15px;
   line-height: 1.6;
 }
+
 /* lábléc top/bottom padding */
 .footer {
   padding-top: 2.5rem;

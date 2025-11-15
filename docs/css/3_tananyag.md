@@ -5,6 +5,7 @@ sidebar_label: "3. tananyag"
 title: "3. CSS - hátterek (szín és kép) beállítása, speciális formázási lehetőségeik"
 ---
 ## Háttértulajdonságok (background-)
+---
 
 A weblap valamennyi elemének (karakter, szó, címsor, bekezdés, lista, táblázat, kép stb.) van háttér-
 rétege, amely alapértelmezetten
