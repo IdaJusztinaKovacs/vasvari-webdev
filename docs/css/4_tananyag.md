@@ -72,7 +72,7 @@ A dobozmodell egyes elemeire meghatározott értékek:
 
 **Tehát az elfoglalt tényleges szélesség nagysága 136px**
 
-## Példa: a szélesség értékének kiszámítása
+## Példa: a magasság értékének kiszámítása
 ---
 
 ![Doboz_magassag](/img/doboz_magassag.jpg)
