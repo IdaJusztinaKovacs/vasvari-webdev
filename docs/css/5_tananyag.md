@@ -99,6 +99,51 @@ Ennek következtében:
 ```
 ![Pozicionalas_fixed](/img/poz_fixed.JPG)
 
+:::tip
+A fixed pozicionálást gyakran használjuk fejléc és lábléc rögzítésére. A tartalom görgethetően megjelenik közöttük.
+:::
+
+### Ragadós pozíció (sticky)
+
+A `sticky` pozíció egy **relative + fixed hibrid**
+
+A sticky elem kezdetben normálisan viselkedik, majd amikor eléri a megadott pozíciót (pl. top: 0), "odaragad" és ott marad, amíg a szülő konténere látható. De csak addig marad ott, amíg a szülő konténere látható.
+
+Amikor a szülő konténer **alja eléri a sticky elemet**, az már nem tud a megadott pozíción maradni, **tovább görgetődik**, mintha újra relative lenne.
+
+```css
+.sticky-doboz {
+    position: sticky;
+    top: 0;
+}
+```
+
+:::warning FONTOS!
+A sticky elem **nem a viewporthoz van kötve**, hanem **a szülő görgetési tartományához.**
+**A sticky csak a szülő konténeren belül működik!!**
+:::
+
+:::tip
+Több sticky elem is lehet egy konténerben, különböző pozíciókkal. Például oldalsáv elemei, amelyek különböző távolságokban "ragadnak".
+```css
+.sticky-top-0 {
+    position: sticky;
+    top: 0;
+}
+
+.sticky-top-140 {
+    position: sticky;
+    top: 140px;
+}
+
+.sticky-top-280 {
+    position: sticky;
+    top: 280px;
+}
+```
+:::
+
+
 ### Z magasság (z-index)
 
 A dokumentumfolyamban az elemek alapértelmezés szerint egymás fölé rétegződnek: a később érkező elemek a korábban lévők fölé kerülnek, vagyis felül „lapolódnak”.
@@ -206,7 +251,7 @@ A display tehát a webes layoutok egyik legfontosabb tulajdonsága, mert alapjai
 **A leggyakrabban használt értékek:**
 - **inline (alapértelmezett érték):** szövegközi vagy folytonos elrendezésű
 - **block (blokk-doboz):** blokkszintű elem
-- **inline-block:** blokk-dobozként formáz-ható, de inline dobozként kerül elhelyezésre az oldalon
+- **inline-block:** blokk-dobozként formázható, de inline dobozként kerül elhelyezésre az oldalon
 - **none:** az elemhez nem rendel sorközi vagy blokkszintű dobozt, azaz az elemnek nincsen hatása a weboldal elrendezésére
 
 :::important FONTOS!
