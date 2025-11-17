@@ -168,7 +168,7 @@ A z-index a **böngészőablak síkjára merőleges (z) tengelyen mozgatja fel v
 
 ![Z-index](/img/z_index.JPG)
 
-:::important Fontos!
+:::warning Fontos!
 **A z-index csak akkor működik, ha az elem pozicionált** (position: relative | absolute | fixed | sticky).
 Alapértéke auto, ami azt jelenti, hogy a dokumentumfolyam határozza meg a rétegződést.
 :::
@@ -181,7 +181,7 @@ Ha egy elemet **biztosan legalulra** szeretnénk helyezni, adjunk neki **nagyon 
 ```
 Ha pedig **biztosan legfelülre** szeretnénk tenni, használjunk **nagyon nagy pozitív értéket**, például:
 ```css
-    z-index: -10000;
+    z-index: 10000;
 ```
 :::
 
