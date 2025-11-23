@@ -197,6 +197,8 @@ Ha egy szülő elem opacity-t kap, a teljes tartalma átlátszó lesz — képek
         opacity: 0.4;
     }
 ```
+Ebben a példában az elem átlátszóságát 0.4-re állítottuk. Ez azt jelenti, hogy csak részben átlátszó, így a háttérkép vagy az elemek alatta részben láthatók lesznek. Ezt a hatást kreatív dizájnokban és átmenetekben lehet alkalmazni.
+
 :::warning FONTOS!
 **Ha csak a hátteret szeretnéd átlátszóvá tenni, akkor *nem* az `opacity` tulajdonságot kell használni, hanem `rgba()` vagy `hsla()` színértéket.**
 :::
@@ -249,10 +251,23 @@ Ezen keresztül szabályozzuk az elem:
 A display tehát a webes layoutok egyik legfontosabb tulajdonsága, mert alapjaiban befolyásolja az elem viselkedését.
 
 **A leggyakrabban használt értékek:**
-- **inline (alapértelmezett érték):** szövegközi vagy folytonos elrendezésű
-- **block (blokk-doboz):** blokkszintű elem
-- **inline-block:** blokk-dobozként formázható, de inline dobozként kerül elhelyezésre az oldalon
-- **none:** az elemhez nem rendel sorközi vagy blokkszintű dobozt, azaz az elemnek nincsen hatása a weboldal elrendezésére
+- **inline (alapértelmezett érték):** Ez az érték lehetővé teszi, hogy az elem egy sorban jelenjen meg a szöveg részeként anélkül, hogy új sorba kerülne. Az elem szélessége csak annyi lesz, amennyi a tartalom méretétől szükséges.
+- **block (blokk-doboz):** Ez az érték általában a legelterjedtebb és legtöbb HTML elem alapértelmezett megjelenési módja. Az elem egy blokkot képez, amely a rendelkezésre álló helyet teljes szélességben elfoglalja, így a következő elem a sor alatt jelenik meg.
+- **inline-block:** Blokk-dobozként formázható, de inline dobozként kerül elhelyezésre az oldalon. Az inline és block közötti kompromisszumot jelenti. Az elemek sorban jelennek meg, de lehetővé teszik a szélesség és a magasság beállítását, valamint a margin és padding használatát.
+- **none:** Ez az érték az elemhez nem rendel sorközi vagy blokkszintű dobozt, azaz az elemnek nincsen hatása a weboldal elrendezésére. Az elem elrejtésére használják így az nem foglal teret és teljesen eltűnik a megjelenésből.
+- **flex:** Lehetővé teszi a rugalmas elrendezés létrehozását egy tartományon belül, amely lehetővé teszi az elemek dinamikus elrendezését és viselkedését.
+- **grid:** Érték használata egy többszintű elrendezési rendszert hoz létre, ahol az elemek egy síkon vagy síkokon helyezkednek el.
+
+**Példa:**
+```css
+.pelda {
+  display: block;
+  width: 200px;
+  height: 100px;
+  background-color: #ff0000;
+}
+```
+Ebben a példában beállítottuk a display tulajdonságot block értékre. Ez azt jelenti, hogy az elem blokk formában jelenik meg, és teljes szélességet foglal el. Az elemnek beállítottunk egy 200 pixel szélességet és egy 100 pixel magasságot, és piros háttérszínt alkalmaztunk rá. Így az elem egy piros téglalap formájában jelenik meg az oldalon.
 
 :::important FONTOS!
 **Egy elem kijelzési tulajdonságának, azaz a display értékének beállítása csak az elem megjelenítésének módját változtatja meg, NEM pedig azt, hogy az milyen típusú
