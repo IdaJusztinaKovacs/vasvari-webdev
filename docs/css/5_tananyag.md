@@ -241,6 +241,34 @@ A `visibility` (láthatóság) tulajdonság egy adott elem két lehetséges áll
 - **collapse (csak táblázatoknál):** sorok, oszlopok, sorcsoportok, oszlopcsoportok elrejtéséhez
 - **inherit:** szülőtől örökölt érték
 
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    h3 {
+        visibility: hidden;
+    }
+</style>
+</head>
+<body>
+
+<h1>Láthatóság (visibility) tulajdonság</h1>
+
+<h2>Ez a címsor látható</h2>
+
+<h3>Ez a címsor rejtett</h3>
+
+<p>Bár a címsor el van rejtve, mégis ott marad a helye az oldalon.</p>
+
+</body>
+</html>
+```
+
+:::tip
+A rejtett elemek továbbra is helyet foglalnak az oldalon. Használd a CSS display tulajdonságát, ha el akarod rejteni és el is akarod távolítani az elemet a dokumentum elrendezéséből!
+:::
+
 ### Megjelenítés (display)
 A `display` CSS-tulajdonság határozza meg, hogy a böngésző milyen típusú dobozt generál az elemhez.
 Ezen keresztül szabályozzuk az elem:
@@ -260,12 +288,12 @@ A display tehát a webes layoutok egyik legfontosabb tulajdonsága, mert alapjai
 
 **Példa:**
 ```css
-.pelda {
-  display: block;
-  width: 200px;
-  height: 100px;
-  background-color: #ff0000;
-}
+    .pelda {
+        display: block;
+        width: 200px;
+        height: 100px;
+        background-color: #ff0000;
+    }
 ```
 Ebben a példában beállítottuk a display tulajdonságot block értékre. Ez azt jelenti, hogy az elem blokk formában jelenik meg, és teljes szélességet foglal el. Az elemnek beállítottunk egy 200 pixel szélességet és egy 100 pixel magasságot, és piros háttérszínt alkalmaztunk rá. Így az elem egy piros téglalap formájában jelenik meg az oldalon.
 
