@@ -241,6 +241,8 @@ A `visibility` (láthatóság) tulajdonság egy adott elem két lehetséges áll
 - **collapse (csak táblázatoknál):** sorok, oszlopok, sorcsoportok, oszlopcsoportok elrejtéséhez
 - **inherit:** szülőtől örökölt érték
 
+**Példa:**
+
 ```html
 <!DOCTYPE html>
 <html>
