@@ -2,7 +2,7 @@
 id: 3_tananyag
 sidebar_position: 3
 sidebar_label: "3. tananyag"
-title: "3. A Bootstrap konténerei (containers)"
+title: "3. A Bootstrap 5 konténerei (containers)"
 ---
 
 ## Konténerek

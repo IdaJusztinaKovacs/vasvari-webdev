@@ -2,7 +2,7 @@
 id: 2_tananyag
 sidebar_position: 2
 sidebar_label: "2. tananyag"
-title: "2. Breakpointok használata a Bootstrapben"
+title: "2. Breakpointok használata a Bootstrap 5-ben"
 ---
 
 ## Breakpoints
