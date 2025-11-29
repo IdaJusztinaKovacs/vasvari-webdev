@@ -22,7 +22,7 @@ A rácsrendszer **három alapegységből** épül fel:
 A rács mindig egy soron belül működik, és egy sor **összesen 12 egységet** tartalmaz.  
 Bármilyen oszlopkombináció használható, amíg a 12-t nem haladja meg.
 
-### 1. Konténer (`container`)
+### 1. Konténer (container)
 
 A rácsrendszer alapja a konténer, amely meghatározza:
 
@@ -109,12 +109,12 @@ Reszponzív viselkedéshez töréspontokat is rendelhetünk az oszlopokhoz.
 ## Hogyan lehet létrehozni a Bootstrap rácsrendszerével egy struktúrát?
 ---
 
-1. Először létre kell hozni a külső tárolót, amely a sorok és oszlopok „burkolójaként” működik, és ehhez a container / container-fluid / container-\{töréspont\} osztályokat.
-2. Ezen belül kell elkészíteni a sorokat a row osztály alkalmazásával.
-3. Ezután a sorokon belül kell definiálni az oszlopokat, amelyekhez a col, a col-xx és ezeknek a töréspontokkal kombinált változatait (pl. col-md-3) használjuk.
-4. Végül az egyes oszlopokon belül definiáljuk a tényleges tartalmat (div, h, p, …).
+- **Először létre kell hozni a külső tárolót**, amely a sorok és oszlopok „burkolójaként” működik, és ehhez a **container / container-fluid / container-\{töréspont\}osztályok**at.
+- **Ezen belül** kell elkészíteni a **sorokat a row osztály alkalmazásával**.
+- Ezután a **sorokon belül** kell definiálni az **oszlopokat**, amelyekhez a **col, a col-xx** és ezeknek a **töréspontokkal kombinált változat**ait **(pl. col-md-3)** használjuk.
+- Végül az **egyes oszlopokon belül definiáljuk a tényleges tartalmat (div, h, p, …)**.
 
-## Kétoszlopos elrendezés törésponttal (col-12, col-md-6)
+### 1. Példa: Kétoszlopos elrendezés törésponttal (col-12, col-md-6)
 ---
 Mobilon egymás alatt, tableten és asztali gépen egymás mellett:
 
@@ -129,7 +129,7 @@ Mobilon egymás alatt, tableten és asztali gépen egymás mellett:
 - `<768px`: mindkét oszlop 12 egység (egymás alatt)
 - `≥768px`: mindkettő 6 egység (két hasáb)
 
-## Automatikus oszlopelosztás
+### 2. Példa: Automatikus oszlopelosztás
 ---
 
 A Bootstrap automatikusan igazítja az oszlopok méretét:
@@ -144,7 +144,7 @@ A Bootstrap automatikusan igazítja az oszlopok méretét:
 #### Magyarázat: 
 - Mindegyik egyenlő széles lesz.
 
-## Háromoszlopos elrendezés példája (col-sm-4, col-sm-4, col-sm-4)
+### 3. Példa: Háromoszlopos elrendezés példája (col-sm-4, col-sm-4, col-sm-4)
 ---
 
 ```html
@@ -162,3 +162,46 @@ A Bootstrap automatikusan igazítja az oszlopok méretét:
 - **576px felett** (tableten, laptopon, nagy kijelzőn) **mindhárom** oszlop **4 egység széles**.
 - **A 12 egységes rácsban így: 4 + 4 + 4 = 12** tehát pontosan kitöltik a sort.
 - Az elrendezés: balra – középen – jobbra három egyenlő hasábban.
+
+### 4. Példa: Háromoszlopos elrendezés több törésponttal (md, lg, xl)
+---
+
+Az alábbi példa három különböző oszlopot mutat be, amelyek több töréspont alapján változtatják a szélességüket.
+
+- **1. oszlop:**  
+  - md alatt: 12 oszlop  
+  - md-től: 6 oszlop  
+  - lg-től: 4 oszlop  
+  - xl-től: 3 oszlop
+
+- **2. oszlop:**  
+  - md alatt: 12 oszlop  
+  - md-től: 6 oszlop  
+  - lg-től: 8 oszlop  
+  - xl-től: 4 oszlop
+
+- **3. oszlop:**  
+  - xl alatt: 12 oszlop  
+  - xl-től: 5 oszlop  
+
+```html
+<div class="row">
+
+  <!-- md alatt 12, md-től 6, lg-től 4, xl-től 3 -->
+  <div class="col-md-6 col-lg-4 col-xl-3">
+    tartalom
+  </div>
+
+  <!-- md alatt 12, md-től 6, lg-től 8, xl-től 4 -->
+  <div class="col-md-6 col-lg-8 col-xl-4">
+    tartalom
+  </div>
+
+  <!-- xl alatt 12, xl-től 5 -->
+  <div class="col-xl-5">
+    tartalom
+  </div>
+
+</div>
+```
+
