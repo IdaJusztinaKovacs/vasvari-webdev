@@ -110,6 +110,12 @@ const config = {
             position: "left",
             label: "CSS",
           },
+                    {
+            type: "docSidebar",
+            sidebarId: "BootstrapSidebar",
+            position: "left",
+            label: "Bootstrap",
+          },
 
           {
             href: "https://github.com/",
