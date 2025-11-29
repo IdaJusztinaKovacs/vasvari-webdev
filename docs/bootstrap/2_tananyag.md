@@ -31,6 +31,7 @@ Ezek azt jelölik, hogy az adott osztály a megadott törésponttól felfelé le
 #### Példa grid rendszerre
 
 Mobilon egymás alatt, nagyobb kijelzőn két oszlop:
+
 ```html
 <div class="row">
   <div class="col-12 col-md-6">Első oszlop</div>
