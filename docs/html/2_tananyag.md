@@ -11,14 +11,14 @@ title: "2. HTML alapok II."
 
 A dokumentum egészére vonatkozó információkat tartalmazza
 
-### 1. Kötelező meta-adatok
+### Kötelező meta-adatok
 
     - `<meta charset="utf-8">` ( vagy iso-8859-2 ) karakterkészlet
     - `<title>` ( weblap címe )
     - `<link>` ( a stíluslap csatolása - ha van külső stíluslap )
     - `<style>` ( ha van belső stílus definíció )
 
-### 2. Nem kötelező, de minden esetben javasolt meta-adatok
+### Nem kötelező, de minden esetben javasolt meta-adatok
 
 A weblap kulcsszavai (kereséshez): `<meta name="keywords" content="....">`
 
@@ -31,7 +31,7 @@ Pár szavas összegzés: `<meta name="description" content="....">`
 <meta name="description" content="Szabványkövető weblap készítése" />
 ```
 
-### 3. További `<meta>` címkék
+### További `<meta>` címkék
 
 A `<meta>` címke jellemzőivel a weblapra vonatkozó számos további információ adható meg:
 
@@ -53,7 +53,7 @@ A `<meta>` címke jellemzőivel a weblapra vonatkozó számos további informác
 <meta http-equiv="expires" content="24 Dec 2023 14:00:00 GMT" />
 ```
 
-### 4. `<title>` címke
+## `<title>` címke
 
 A fejlécelemek között a legfontosabb a dokumentumcím
 
@@ -65,7 +65,7 @@ A fejlécelemek között a legfontosabb a dokumentumcím
 - Nagyon fontos része a weboldalnak (mindig célszerű megadnunk)
 - Csak betűket, számokat vagy különleges karaktereket tartalmazhat, de más címkéket nem!
 
-### 5. `<link>` címke
+## `<link>` címke
 
 #### Példa: Külső CSS-stíluslapok kapcsolása, csatolása
 
@@ -75,7 +75,7 @@ A fejlécelemek között a legfontosabb a dokumentumcím
 
 A `<link>` tagnak nincs záró párja.
 
-### 6. `<script>` címke
+## `<script>` címke
 
 #### Példa: JS-scriptfájl csatolása:
 
@@ -85,7 +85,7 @@ A `<link>` tagnak nincs záró párja.
 
 Egy HTML-oldalhoz akár több CSS-fájl is kapcsolható.
 
-### 7. `<style>` címke
+## `<style>` címke
 
 A `<style>` taggal az adott oldalon érvényes stílusokat definiálhatunk
 (Belső vagy beágyazott CSS-stílusok megadása).
@@ -102,7 +102,7 @@ A `<style>` taggal az adott oldalon érvényes stílusokat definiálhatunk
 </style>
 ```
 
-### 8. Összefoglaló
+## Összefoglaló
 
 `<title>...</title>`: a böngészőfülön megjelenő cím (ezt mindig adjuk meg!)
 
@@ -129,7 +129,7 @@ A `<style>` taggal az adott oldalon érvényes stílusokat definiálhatunk
 A törzs (dokumentumtörzs) a `<body>` és `</body>` elemek között helyezkedik el.  
 Ez tartalmazza a weblap **látható tartalmát**.
 
-### 1. Jellemzői
+### Jellemzői
 
 - A böngésző megjeleníti → ez a weboldal „látható része”.
 - A CSS-stílussal történő formázás is alapvetően erre vonatkozik.
@@ -156,7 +156,7 @@ Ez tartalmazza a weblap **látható tartalmát**.
 </body>
 ```
 
-### 2. A `<body>` rész alapvető szöveges tag-jei
+### A `<body>` rész alapvető szöveges tag-jei
 
 | Tag            | Jelentés / használat                 |
 | -------------- | ------------------------------------ |
@@ -193,8 +193,8 @@ A fenti kódot tartalmazó HTML fájlt böngészőben megnyitva a következő ki
 
 ![Bekezdés és címsorok](/img/cimsor.jpg)
 
-### 3. `<img/>` páratlan címke
-
+## `<img/>` páratlan címke
+---
 Ha egy weboldalra egy képet szeretnénk beszúrni, akkor ezt az `<img/>` páratlan taggel tudjuk megtenni. A tag fontosabb attribútumai:
 
 - **src:** a kép elérési útvonala
@@ -222,23 +222,29 @@ Ha a width és height attribútumok közül csak az egyiket adjuk meg, akkor a m
 
 <img src="/vasvari-webdev/img/medve.jpg" alt="Medve" class="medve-img" />
 
-### 4. `<a>` címke
-
+## `<a>` címke
+---
 Az `<a>` tag egy **hiperhivatkozást** definiál, amelyet egyik oldalról a másikra való hivatkozásra használunk.  
 Legfontosabb attribútuma a **href**, amely a hivatkozás címét (URL vagy fájl) adja meg.
 
-#### Alap szintaxis
+### Alap szintaxis
 
 ```html
 <a href="https://www.wikipedia.org">Wikipédia</a>
 ```
+### Fontos attribútomok
+- **href**: kötelező, a link célját adja meg
+- **target**: opcionális, a megnyitás módját szabályozza. 
+A target attribútum **lehetséges értékei**:
+    - **\_self** *(ugyanott, ahol rákattintottunk (alapértelmezett))*; 
+    - **\_blank** *(új lapon vagy ablakban)*; 
+    - **\_top** *(ablak tetején)*; 
+    - **\_parent** *(szülő dokumentumban).*
+- **title**: opcionális, kiegészítő információ: ha fölé viszed az egeret, „buborékban” megjelenik a szöveg.
 
 Alapértelmezés szerint a hivatkozások minden böngészőben így jelennek meg:
-
 - A még nem látogatott link kék és aláhúzott
-
 - A már meglátogatott link lila és aláhúzott
-
 - Az éppen aktív (kattintás alatt lévő) link piros és aláhúzott
 
 #### Példa:
@@ -252,42 +258,97 @@ Alapértelmezés szerint a hivatkozások minden böngészőben így jelennek meg
 </p>
 ```
 
-:::important FONTOS
+### Linkek típusai
 
-#### Linkek típusai
+**1. Külső link (másik weboldalra):**
+```html
+<a href="https://www.google.com">Google</a>
+```
+**2. Belső link – a honlap másik oldalára: (Ez a webhely saját fájljai között navigál.)**
 
-- Lehet egy másik weboldal: `<a href="https://www.google.com">Google</a> `
-- Lehet lapon belüli hivatkozás: `<a href="#top">Vissza a tetejére</a> `
+```html
+<a href="rolunk.html">Rólunk oldal</a>
+```
+**3. Belső link – egy másik oldalon lévő tartalmi pontra (anchor):**
 
-  (ez az id="top" attribútummal rendelkező elemre mutat)
+(A link céloldalán szerepel egy id="" attribútum.)
 
-- Lehet egy másik file: `<a href="bevasarlolista.txt">Bevásárlólista</a>`
-  :::
+```html
+<a href="rolunk.html#tortenet">Cég története</a>
+```
+A céloldalon:
+```html
+<h2 id="tortenet">A cég története</h2>
+<p>...</p>
+```
 
-#### Fontos attribútomok
+**4. Lapon belüli ugrás (ugyanazon az oldalon belül): (ez az id="top" attribútummal rendelkező elemre mutat)**
 
-- **href** → kötelező, a link célját adja meg
-- **target** → opcionális, a megnyitás módját szabályozza
-- **title** → opcionális, kiegészítő információ: ha fölé viszed az egeret, „buborékban” megjelenik a szöveg.
+```html
+<a href="#top">Vissza a tetejére</a>
+```
+A cél:
+```html
+<div id="top"></div>
+```
+**5. Lehet egy másik file:**
 
-:::note
+```html
+<a href="bevasarlolista.txt">Bevásárlólista</a>
+```
 
-#### A target attribútum lehetséges értékei
+:::tip KIEGÉSZÍTŐ TANANYAG
+  #### Linkelemek állapotfüggő formázása modern CSS-ben
 
-- **\_self:** ugyanott, ahol rákattintottunk (alapértelmezett)
+  A HTML-ben található hivatkozásokat (`<a>` elemeket) az egyes megjelenési állapotaik alapján lehet formázni. A linkek négy fő állapottal rendelkeznek, amelyekhez külön CSS-stílusok rendelhetők. Ezeket az állapotfüggő formázásokat a megfelelő pszeudoosztályokkal (például `:hover`, `:visited`, `:active`) lehet megadni.
 
-- **\_blank:** új lapon vagy ablakban
+ **1. Alap állapot**
+Ez a link normál, alap nézete.
 
-- **\_top:** ablak tetején
+```css 
+    a {
+        color: #0055cc;         /*a link színe*/
+        text-decoration: none;  /*eltávolítja az alapértelmezett aláhúzást*/
+        font-weight: bold;
+        padding: 5px;
+    }
+```
+**2. Látogatott link – `a:visited`**
 
-- **\_parent:** szülő dokumentumban
-  :::
+Akkor lép életbe, ha a felhasználó már járt azon a linken.
+
+```css
+    a:visited {
+        color: #551A8B;
+    }
+```
+
+**3. Egér fölé húzva – `a:hover`**
+
+A hover akkor aktiválódik, amikor az egér a link fölé kerül.
+
+```css
+    a:hover {
+        color: #ff6600;
+        text-decoration: underline;
+    }
+```
+**4. Kattintás pillanata – `a:active`**
+
+Ez az állapot egy rövid ideig látható, amikor a linket éppen lenyomják.
+
+```css
+    a:active {
+        color: red;
+    }
+```
+:::
 
 ## További tartalmi és formázó elemek
 
 ---
 
-### 1. Sortörés és elválasztás
+### Sortörés és elválasztás
 
 ```html
 <p>Ez egy sor.<br />Ez már új sorban jelenik meg.</p>
@@ -295,7 +356,7 @@ Alapértelmezés szerint a hivatkozások minden böngészőben így jelennek meg
 <p>Ez pedig a vízszintes vonal alatt van.</p>
 ```
 
-### 2. Előre formázott szöveg
+### Előre formázott szöveg
 
 `<pre>...</pre>` – alakhű megjelenítés, megőrzi a szóközöket, sortöréseket
 
@@ -306,9 +367,9 @@ Alapértelmezés szerint a hivatkozások minden böngészőben így jelennek meg
 </pre>
 ```
 
-### 3. Kiemelések
+### Kiemelések
 
-#### 3.1 Szemantikus kiemelések
+#### Szemantikus kiemelések
 
 Ezeket a böngészők és a képernyőolvasók is „értelmezik”:
 
@@ -328,7 +389,7 @@ Ezeket a böngészők és a képernyőolvasók is „értelmezik”:
 
 ![Kiemeles](/img/kiemelt.jpg)
 
-#### 3.2 Nem szemantikus (régi, kinézethez kötött) kiemelések
+#### Nem szemantikus (régi, kinézethez kötött) kiemelések
 
 Ezek ma is működnek, de nem ajánlott használni őket, mert csak formázást adnak, jelentést nem:
 
@@ -338,7 +399,7 @@ Ezek ma is működnek, de nem ajánlott használni őket, mert csak formázást 
 
 `<u>` → aláhúzott szöveg
 
-### 4. Indexek
+### Indexek
 
 `<sub>` – alsó index
 
@@ -353,7 +414,7 @@ Ezek ma is működnek, de nem ajánlott használni őket, mert csak formázást 
 
 ![Indexek](/img/indexek.jpg)
 
-### 5. Idézetek
+### Idézetek
 
 `<q>` – rövid idézet (idézőjelet automatikusan tesz)
 
@@ -372,7 +433,7 @@ Ezek ma is működnek, de nem ajánlott használni őket, mert csak formázást 
 
 ![Idézetek](/img/idezetek.jpg)
 
-### 6. Kód és előformázás
+### Kód és előformázás
 
 `<code>` – rövid kódrészlet
 
@@ -392,7 +453,7 @@ for (let i = 0; i < 5; i++) {
 
 ![Kod](/img/kod.jpg)
 
-### 7. Iframe (lebegő keret)
+### Iframe (lebegő keret)
 
 Az `<iframe>` tag segítségével másik weboldalt ágyazhatunk a weblapba.
 
