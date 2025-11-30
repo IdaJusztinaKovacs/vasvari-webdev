@@ -26,13 +26,14 @@ Bootstrap honlapja: https://getbootstrap.com
 A **Bootstrap** külső szolgáltatónál elhelyezett **CSS állomány**át egyszerűen beemelhetjük HTML állományainkba egy link segítségével (ezt a HTML dokumentum fejlécében kell elhelyezni):
 
 ```html
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
 ```
 
 Egyes interaktív szolgáltatások eléréséhez szükség van a **Bootstrap JavaScript állomány**ára is. Ehhez a következő sort el kell helyezni a HTML állomány lezáró body eleme előtt:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 ```
 
 #### Bootstrap sablon
@@ -45,21 +46,20 @@ Egyes interaktív szolgáltatások eléréséhez szükség van a **Bootstrap Jav
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap példa</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao1+N9Lki47SRGZiV1EkBU1de1LKnf0KSssv" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
 
     <h1 class="text-center mt-4">Bootstrap 5 működik!</h1>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
 ```
-### Bootstrap bemelése a HTML állomány mellé
+### Bootstrap letöltése és a projekt mappájában való használata
+A Bootstrap állományai közvetlenül is elhelyezhetők a projekt HTML-fájljai mellett. Ehhez először le kell tölteni a Bootstrap csomagot, majd a kapott ZIP-állomány kicsomagolása után a szükséges CSS-fájlokat a HTML mellé, illetve — amennyiben interaktív komponenseket is használunk — a megfelelő JavaScript-fájlokat is be kell másolni a projekt struktúrájába.
 
-A Bootstrap állományait közvetlenül is elhelyezhetjük a HTML fájljaink mellett. Ehhez töltsük le a Bootstrap csomagot, majd a kapott ZIP állomány kicsomagolása után helyezzük el a szükséges CSS fájlokat a HTML mellé, illetve – ha interaktív elemeket is használunk – a JavaScript fájlokat is.
-
-A Bootstrap 5.0.2 verziójának előre összeállított, minifikált CSS- és JS-fájljai az alábbi oldalról tölthetők le, és közvetlenül felhasználhatók a projektben: https://getbootstrap.com/docs/5.0/getting-started/download/#compiled-css-and-js
+A Bootstrap 5.3.8 verziójának előre összeállított, minifikált CSS- és JS-fájljai az alábbi oldalról tölthetők le, és közvetlenül felhasználhatók a projektben: https://getbootstrap.com/docs/5.3/getting-started/download/#cdn-via-jsdelivr
 
 #### Offline Bootstrap sablon
 

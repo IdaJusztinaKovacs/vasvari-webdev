@@ -94,7 +94,7 @@ Példa:
 
 ### 5. Töréspontok használata
 
-Reszponzív viselkedéshez töréspontokat is rendelhetünk az oszlopokhoz.
+A reszponzív működés érdekében az oszlopokhoz különböző töréspontokat rendelhetünk, amelyek meghatározzák, hogy milyen képernyőszélességnél milyen elrendezést alkalmazzon a rendszer.
 
 | Töréspont | Jelölés | Aktiválódik |
 |----------|---------|-------------|

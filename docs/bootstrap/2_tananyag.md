@@ -9,7 +9,7 @@ title: "2. Breakpointok használata a Bootstrap 5-ben"
 ---
 A Bootstrapben nem szükséges saját @media lekérdezéseket írni ahhoz, hogy különböző felbontású képernyőkön eltérő elrendezéseket kapjunk. Ehelyett használhatjuk a töréspontokat (breakpoints).
 
-A **töréspont** egy olyan **Bootstrap-változó**, amely a képernyő minimális szélességéhez kapcsolódik.
+A **töréspont** egy olyan **Bootstrap-változó**, amely a képernyő minimális szélességéhez kapcsolódik, egy előre definiált szélességi határérték.
 Ha egy osztályhoz megadunk egy töréspontot, az azt jelenti, hogy az adott stílus vagy elrendezés csak akkor lesz érvényben, ha a képernyő szélessége eléri vagy meghaladja a töréspont értékét.
 
 A Bootstrap 5 keretrendszer 6 (hat) alapértelmezett töréspontot tartalmaz. A fejlesztők ezeket a töréspontokat úgy választották meg, hogy a weboldalakon kialakításra kerülő tárolók kényelmesen elférjenek a BS 12 oszlopos rácsrendszerében. 
